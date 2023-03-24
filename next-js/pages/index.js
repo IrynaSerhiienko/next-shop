@@ -30,7 +30,7 @@ export default function Home({ socials }) {
       <Head>
         <title>Home</title>
       </Head>
-      <Heading text='Hello world!' />
+      <Heading text='Hello world!!!!!!!' />
       <Socials socials={socials} />
     </div>
   );
