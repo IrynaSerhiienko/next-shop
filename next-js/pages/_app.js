@@ -9,14 +9,14 @@ export default function App({ Component, pageProps }) {
       <main>
         <Component {...pageProps} />
       </main>
-      <Image
+      {/* <Image
         src={youtubeImg}
         width={500}
         height={350}
         alt='preview'
         placeholder='blur'
         blurDataURL=''
-      />
+      /> */}
     </Layout>
   );
 }
