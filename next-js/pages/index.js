@@ -48,7 +48,7 @@ export default function Home({ socials }) {
       <Head>
         <title>Home</title>
       </Head>
-      <Heading text='Hello Next!!!.js' />
+      <Heading text='Hello Next.js' />
       <Socials socials={socials} />
     </div>
   );
