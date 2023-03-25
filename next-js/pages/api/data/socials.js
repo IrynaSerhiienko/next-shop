@@ -19,4 +19,14 @@ export const socials = [
     icon: 'facebook',
     path: '',
   },
+  {
+    id: 5,
+    icon: 'facebook',
+    path: '',
+  },
+  {
+    id: 6,
+    icon: 'facebook',
+    path: '',
+  },
 ];
