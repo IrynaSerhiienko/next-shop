@@ -3,12 +3,13 @@ import Head from 'next/head';
 import s from '@/styles/Home.module.scss';
 import Heading from '@/components/Heading';
 import Socials from '@/components/Socials';
+import Content from '@/components/Content';
 import Hero from '@/components/Hero';
-// import Main from '@/components/Main';
+// import Menu from '@/components/Menu';
 
 export const getStaticProps = async () => {
   try {
-    const response = await axios.get('https://buy-cakes.herokuapp.com/api/cakes');
+    const response = await axios.get('http://localhost:3000/api/cakes/');
     const cakes = response.data;
     console.log(cakes);
 
@@ -46,7 +47,31 @@ export default function Home({ socials, cakes }) {
       <Head>
         <title>Home</title>
       </Head>
+      {/* <Content /> */}
       <Hero />
+      {/* <Menu /> */}
+      <div className='flex mb-2 bg-slate-400'>
+        <ul>
+         {cakes && cakes.map((cake) => (
+            <li key={cake.id}>
+              <div>
+                <img src={cake.image} alt={cake.name} width={300} height={300} />
+              </div>
+              <div>
+                <h2>{cake.name}</h2>
+                <p>{cake.description}</p>
+                <p>Цена: {cake.price}</p>
+                {/* <button onClick={() => handleAddToCart(cake.id)}>
+                  <FiShoppingCart />
+                  Добавить в корзину
+                </button> */}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <h1 className='text-3xl font-bold bg-red-700'>Test Tailwind</h1>
       {/* <Main main={main}/> */}
       {/* <Heading text='Hello Next.js' /> */}
       {/* <Socials socials={socials} /> */}

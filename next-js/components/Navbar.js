@@ -5,8 +5,14 @@ import s from '../styles/Navbar.module.scss';
 
 const navigation = [
   { id: 1, title: 'Home', path: '/' },
-  { id: 2, title: 'Posts', path: '/posts' },
-  { id: 3, title: 'Contacts', path: '/contacts' },
+  { id: 2, title: 'Menu', path: '/menu' },
+  { id: 3, title: 'Gallery', path: '/gallery' },
+  { id: 4, title: 'About Us', path: '/aboutUs' },
+  { id: 5, title: 'Payment & Delivery', path: '/paymentDelivery' },
+  { id: 6, title: 'Reviews', path: '/reviews' },
+  { id: 7, title: 'Contacts', path: '/contacts' },
+  { id: 8, title: 'Posts', path: '/posts' },
+  { id: 9, title: 'Contacts', path: '/contacts' },
 ];
 
 const Navbar = () => {

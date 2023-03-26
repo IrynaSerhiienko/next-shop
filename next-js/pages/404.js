@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Heading from '@/components/Heading';
+import Image from 'next/image';
 import s from '../styles/404.module.scss';
 
 export default function Error() {
@@ -18,8 +19,10 @@ export default function Error() {
       <Head>
         <title>Error</title>
       </Head>
-      <Heading text='404' />
-      <Heading tag='h2' text='Something is going wrong...' />
+      <div className={s.error404}>
+        <Image src='/img/main_404/404.png' width={570} height={340} alt='preview' />
+      </div>
+      <Heading tag='h2' text='oh, something went wrong' />
     </div>
   );
 }
