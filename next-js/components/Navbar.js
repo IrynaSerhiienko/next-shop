@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import styles from '../styles/Navbar.module.scss';
+import s from '../styles/Navbar.module.scss';
 
 const navigation = [
   { id: 1, title: 'Home', path: '/' },
@@ -13,14 +13,14 @@ const Navbar = () => {
   const { pathname } = useRouter();
 
   return (
-    <nav className={styles.nav}>
-      <div className={styles.logo}>
-        <Image src='/logo.png' width={60} height={60} alt='_SIA_Shop' />
+    <nav className={s.nav}>
+      <div className={s.logo}>
+        <Image src='/img/logo/yana-caker-logo.png' width={50} height={50} alt='Yana Caker shop' />
       </div>
-      <div className={styles.links}>
+      <div className={s.links}>
         {navigation.map(({ id, title, path }) => (
           <Link legacyBehavior key={id} href={path}>
-            <a className={pathname === path ? styles.active : null}>{title}</a>
+            <a className={pathname === path ? s.active : null}>{title}</a>
           </Link>
         ))}
       </div>

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -6,7 +10,8 @@ body {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+  background-color: #e9e0e0;
+  //   background: linear-gradient(to bottom, #4e54c8, #8f94fb);
   color: #fff;
   font-size: 20px;
 }
@@ -18,8 +23,8 @@ body {
 }
 
 main {
-  padding: 20px;
-//   height: 1500px;
+  //   padding: 20px;
+  //   height: 1500px;
 }
 
 header,
@@ -28,22 +33,17 @@ footer {
 }
 
 header {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.5)
-  );
+  background-image: linear-gradient(to bottom, rgba(245, 155, 155, 0.5), rgba(233, 223, 223, 0.7));
+  background-color: #f49797;
   display: flex;
   align-items: center;
   padding: 0 20px;
 }
 
 footer {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.5)
-  );
+  background: #cf726d;
+  border-radius: 240px 240px 0px 0px;
+  //   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
   text-align: center;
   font-size: 12px;
   display: flex;
@@ -53,6 +53,11 @@ footer {
 }
 
 a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1240px;
+  border: 1px solid red;
 }
