@@ -2,8 +2,7 @@ import axios from 'axios';
 import Head from 'next/head';
 import Image from 'next/image';
 import s from '@/styles/Menu.module.scss';
-import MenuItem from '../../components/MenuItem';
-import MenuAside from '../../components/MenuAside';
+import MenuContent from '../../components/MenuContent';
 // import Link from 'next/link';
 
 export const getStaticProps = async (context) => {
@@ -36,50 +35,12 @@ export default function Menu({ cakes }) {
             <Image src='/img/main_menu/title.png' width={418} height={68} alt='preview' />
           </div>
 
-          <div className={s.menuSection}>
-            <MenuAside />
-            {cakes && <MenuItem cakes={cakes} />}
-          </div>
+          <div className={s.menuSection}>{cakes && <MenuContent cakes={cakes} />}</div>
         </div>
       </section>
     </>
   );
 }
-
-// import { useState } from 'react';
-
-// function ProductList({ products }) {
-//   const [filterText, setFilterText] = useState('');
-
-//   const filteredProducts = products.filter((product) => {
-//     return product.categories.some((category) =>
-//       category.toLowerCase().includes(filterText.toLowerCase())
-//     );
-//   });
-
-//   const handleFilterChange = (selectedCategory) => {
-//     setFilterText(selectedCategory.toLowerCase());
-//   };
-
-//   return (
-//     <div>
-//       <ul>
-//         {products.map((product) => (
-//           <li key={product.id} onClick={ () => handleFilterChange(product.categories[0]) }>
-//             {product.name} - {product.description} ({product.categories.join(', ')})
-//           </li>
-//         ))}
-//       </ul>
-//       <ul>
-//         {filteredProducts.map((product) => (
-//           <li key={product.id}>
-//             {product.name} - {product.description} ({product.categories.join(', ')})
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
 
 // import { FiShoppingCart } from 'react-icons/fi';
 

@@ -11,11 +11,11 @@ const navigation = [
   { id: 5, title: 'Payment & Delivery', path: '/paymentDelivery' },
   { id: 6, title: 'Reviews', path: '/reviews' },
   { id: 7, title: 'Contacts', path: '/contacts' },
-  { id: 8, title: 'Posts', path: '/posts' },
-  { id: 9, title: 'Contacts', path: '/contacts' },
+  //   { id: 8, title: 'Posts', path: '/posts' },
+  //   { id: 9, title: 'Contacts', path: '/contacts' },
 ];
 
-const Navbar = () => {
+export default function Navbar() {
   const { pathname } = useRouter();
 
   return (
@@ -32,9 +32,7 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}
 
 // import { useRouter } from 'next/router';
 // import NextLink from 'next/link';

@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 670px;
+//   height: 670px;
   margin-bottom: 240px;
 }
 
@@ -10,19 +10,20 @@
   top: 50px;
   left: 40%;
   z-index: 0;
+  background-size: contain;
   //left: 800px;
 }
 
 .containerText {
   position: absolute;
-  top: 650px;
-  left: 80%;
+  top: 350px;
+  left: 17%;
   z-index: 1;
 }
 
 .containerLogo {
   position: absolute;
-  top: 330px;
-  left: 27%;
+  top: 100px;
+  left: 0;
   z-index: 1;
 }

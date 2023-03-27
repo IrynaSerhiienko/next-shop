@@ -8,8 +8,8 @@ export default function Hero() {
         <Image
           className={s.hero}
           src='/img/main_hero/hero.png'
-          width={670}
-          height={654}
+          width={265}
+          height={300}
           alt='preview'
         />
       </div>
@@ -17,8 +17,8 @@ export default function Hero() {
         <Image
           className={s.text}
           src='/img/main_hero/text.png'
-          width={255}
-          height={40}
+          width={204}
+          height={32}
           alt='preview'
         />
       </div>
@@ -26,8 +26,8 @@ export default function Hero() {
         <Image
           className={s.logo}
           src='/img/main_hero/yana-caker.png'
-          width={378}
-          height={280}
+          width={358}
+          height={265}
           alt='preview'
         />
       </div>

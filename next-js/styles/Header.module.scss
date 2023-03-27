@@ -1,4 +1,26 @@
-// .header {
-//     position: fixed;
-//     width: 100%;
-// }
+.header {
+  position: fixed;
+  width: 100%;
+  justify-content: center;
+  z-index: 50;
+  //   display: flex;
+  //   margin: 0 auto;
+  //   left: 0;
+  //   top: 0;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  max-width: 1440px;
+  justify-content: space-between;
+  padding: 0 15px;
+  @media screen and (min-width: 768px) {
+    padding: 0 40px;
+  }
+  //   @apply
+  //   border: 1px solid red;
+  //   flex-direction: column;
+  //   margin: 0 auto;
+}

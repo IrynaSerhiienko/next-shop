@@ -4,9 +4,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  .links {
-    height: 100%;
+.links {
+  height: 100%;
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
   }
 
   a {
@@ -14,13 +19,17 @@
     display: inline-flex;
     align-items: center;
     padding: 0 10px;
-    text-transform: uppercase;
-    color: #fff;
+    color: #000;
     text-decoration: none;
+
+    &.active {
+      color: #cf4f48;
+    }
 
     &.active,
     &:hover {
-      background-color: rgba(0, 0, 0, 0.4);
+      text-decoration: underline;
+      //background-color: rgba(0, 0, 0, 0.4);
     }
   }
 }

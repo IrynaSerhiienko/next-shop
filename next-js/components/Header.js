@@ -4,10 +4,10 @@ import Navbar from './Navbar';
 
 export default function Header() {
   return (
-    <div className={s.wrapper}>
-      <header className={s.header}>
+    <header className={s.header}>
+      <div className={s.wrapper}>
         <Navbar />
-      </header>
-    </div>
+      </div>
+    </header>
   );
 }

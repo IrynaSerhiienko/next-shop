@@ -47,14 +47,16 @@ export default function Home({ socials, cakes }) {
       <Head>
         <title>Home</title>
       </Head>
-      {/* <Content /> */}
-      <Hero />
-      <Menu />
-      <h1 className='text-3xl font-bold bg-red-700'>Test Tailwind</h1>
-      {/* <Main main={main}/> */}
-      {/* <Heading text='Hello Next.js' /> */}
+      <Content />
+      <Content />
+      <Content />
+      <Content />
+      <Content />
+      <Content />
+      <Content />
+      {/* <Menu /> */}
       {/* <Socials socials={socials} /> */}
-      {/* <Cakes cakes={cakes} /> */}
+      
     </div>
   );
 }

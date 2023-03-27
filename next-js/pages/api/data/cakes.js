@@ -8,7 +8,8 @@ export const cakes = [
       'Black and white biscuits layered with a light cream based on cream cheese is a wonderful combination of taste and texture. The cake is decorated with a flower with mastic and chocolate crumbs.',
     price: 800,
     weight: 1,
-    available: true,
+    available: false,
+    category: 'chocolate peanuts children wedding',
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const cakes = [
     price: 800,
     weight: 1,
     available: true,
+    category: 'fruit children wedding',
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const cakes = [
     price: 800,
     weight: 1,
     available: true,
+    category: 'fruit wedding',
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const cakes = [
     price: 800,
     weight: 1,
     available: true,
+    category: 'fruit peanuts children',
   },
   {
     id: 5,
@@ -54,6 +58,7 @@ export const cakes = [
     price: 800,
     weight: 1,
     available: true,
+    category: 'fruit chocolate',
   },
   {
     id: 6,
@@ -65,6 +70,7 @@ export const cakes = [
     price: 800,
     weight: 1,
     available: true,
+    category: 'fruit peanuts',
   },
   {
     id: 7,
@@ -77,6 +83,7 @@ export const cakes = [
     price: 800,
     weight: 1,
     available: false,
+    category: 'fruit chocolate children',
   },
   {
     id: 8,
@@ -88,6 +95,7 @@ export const cakes = [
     price: 800,
     weight: 1,
     available: true,
+    category: 'fruit children wedding',
   },
   {
     id: 9,
@@ -99,6 +107,7 @@ export const cakes = [
     price: 800,
     weight: 1,
     available: true,
+    category: 'fruit wedding',
   },
   {
     id: 10,
@@ -110,6 +119,7 @@ export const cakes = [
     price: 800,
     weight: 1,
     available: false,
+    category: 'fruit ',
   },
   {
     id: 11,
@@ -121,6 +131,7 @@ export const cakes = [
     price: 800,
     weight: 1,
     available: true,
+    category: 'fruit wedding',
   },
   {
     id: 12,
@@ -132,5 +143,6 @@ export const cakes = [
     price: 800,
     weight: 1,
     available: true,
+    category: 'chocolate children',
   },
 ];
