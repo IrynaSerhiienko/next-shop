@@ -1,21 +1,23 @@
+import axios from 'axios';
 import Head from 'next/head';
 import Link from 'next/link';
 import Heading from '@/components/Heading';
 
-export const getStaticProps = async () => { //SSR
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-  //   const data = null;
-  const data = await response.json();
+export const getStaticProps = async () => {
+  try {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    //   const data = null;
+    const posts = response.data;
 
-  if (!data) {
+    return {
+      props: { posts },
+    };
+  } catch (error) {
+    console.error(error);
     return {
       notFound: true,
     };
   }
-
-  return {
-    props: { posts: data },
-  };
 };
 
 export default function Posts({ posts }) {
@@ -24,6 +26,7 @@ export default function Posts({ posts }) {
       <Head>
         <title>Posts</title>
       </Head>
+      
       <Heading text='Posts list:' />
       <ul>
         {posts &&

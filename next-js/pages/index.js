@@ -5,7 +5,7 @@ import Heading from '@/components/Heading';
 import Socials from '@/components/Socials';
 import Content from '@/components/Content';
 import Hero from '@/components/Hero';
-// import Menu from '@/components/Menu';
+import Menu from './menu';
 
 export const getStaticProps = async () => {
   try {
@@ -49,28 +49,7 @@ export default function Home({ socials, cakes }) {
       </Head>
       {/* <Content /> */}
       <Hero />
-      {/* <Menu /> */}
-      <div className='flex mb-2 bg-slate-400'>
-        <ul>
-         {cakes && cakes.map((cake) => (
-            <li key={cake.id}>
-              <div>
-                <img src={cake.image} alt={cake.name} width={300} height={300} />
-              </div>
-              <div>
-                <h2>{cake.name}</h2>
-                <p>{cake.description}</p>
-                <p>Цена: {cake.price}</p>
-                {/* <button onClick={() => handleAddToCart(cake.id)}>
-                  <FiShoppingCart />
-                  Добавить в корзину
-                </button> */}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-
+      <Menu />
       <h1 className='text-3xl font-bold bg-red-700'>Test Tailwind</h1>
       {/* <Main main={main}/> */}
       {/* <Heading text='Hello Next.js' /> */}
