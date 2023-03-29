@@ -48,12 +48,6 @@ export default function Home({ socials, cakes }) {
         <title>Home</title>
       </Head>
       <Content />
-      <Content />
-      <Content />
-      <Content />
-      <Content />
-      <Content />
-      <Content />
       {/* <Menu /> */}
       {/* <Socials socials={socials} /> */}
       

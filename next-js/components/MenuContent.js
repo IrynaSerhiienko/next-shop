@@ -20,22 +20,41 @@ export default function MenuContent({ cakes }) {
       <div className={s.asideContainer}>
         <aside className=''>
           <ul className={s.menuLists}>
-            <li className={s.menuList} onClick={() => setSelectedCategory('all')}>
+            <li
+              className={`${s.menuList} ${selectedCategory === 'all' ? s.active : ''}`}
+              onClick={() => setSelectedCategory('all')}
+            >
+              {/* className={`${s.menuList} ${selectedCategory === 'all' ? s.active : ''}`} */}
               all
             </li>
-            <li className={s.menuList} onClick={() => setSelectedCategory('fruit')}>
+            <li
+              className={`${s.menuList} ${selectedCategory === 'fruit' ? s.active : ''}`}
+              onClick={() => setSelectedCategory('fruit')}
+            >
               fruit
             </li>
-            <li className={s.menuList} onClick={() => setSelectedCategory('chocolate')}>
+            <li
+              className={`${s.menuList} ${selectedCategory === 'chocolate' ? s.active : ''}`}
+              onClick={() => setSelectedCategory('chocolate')}
+            >
               chocolate
             </li>
-            <li className={s.menuList} onClick={() => setSelectedCategory('peanuts')}>
+            <li
+              className={`${s.menuList} ${selectedCategory === 'peanuts' ? s.active : ''}`}
+              onClick={() => setSelectedCategory('peanuts')}
+            >
               peanuts
             </li>
-            <li className={s.menuList} onClick={() => setSelectedCategory('children')}>
+            <li
+              className={`${s.menuList} ${selectedCategory === 'children' ? s.active : ''}`}
+              onClick={() => setSelectedCategory('children')}
+            >
               children's favourites
             </li>
-            <li className={s.menuList} onClick={() => setSelectedCategory('wedding')}>
+            <li
+              className={`${s.menuList} ${selectedCategory === 'wedding' ? s.active : ''}`}
+              onClick={() => setSelectedCategory('wedding')}
+            >
               wedding selection
             </li>
           </ul>
