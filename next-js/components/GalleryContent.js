@@ -9,7 +9,7 @@ export default function GalleryContent({ gallery }) {
     return gallery.filter((item) =>
       item.category.toLowerCase().includes(selectedCategory.toLowerCase()),
     );
-  }, [selectedCategory]);
+  }, [gallery, selectedCategory]);
 
   return (
     <>

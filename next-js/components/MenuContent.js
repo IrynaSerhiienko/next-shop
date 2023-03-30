@@ -13,7 +13,7 @@ export default function MenuContent({ cakes }) {
         cake.category.toLowerCase().includes(selectedCategory.toLowerCase()),
       );
     }
-  }, [selectedCategory]);
+  }, [cakes, selectedCategory]);
 
   return (
     <>
@@ -49,7 +49,7 @@ export default function MenuContent({ cakes }) {
               className={`${s.menuList} ${selectedCategory === 'children' ? s.active : ''}`}
               onClick={() => setSelectedCategory('children')}
             >
-              children's favourites
+              children&apos;s favourites
             </li>
             <li
               className={`${s.menuList} ${selectedCategory === 'wedding' ? s.active : ''}`}

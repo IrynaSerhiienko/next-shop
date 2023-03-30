@@ -1,3 +1,6 @@
+import Head from "next/head";
+import Heading from "@/components/Heading";
+
 export default function Reviews() {
     return (
       <>
