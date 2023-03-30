@@ -7,7 +7,8 @@ import s from '@/styles/Gallery.module.scss';
 
 export const getStaticProps = async (context) => {
   try {
-    const response = await axios.get('http://localhost:3000/api/gallery/');
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/gallery/`);
+    // const response = await axios.get('http://localhost:3000/api/gallery/');
     const gallery = response.data;
     // console.log(cakes);
 
