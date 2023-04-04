@@ -1,10 +1,13 @@
 import s from '../styles/Content.module.scss';
-import Hero from './Hero';
+// import Hero from './Hero';
+import MenuHome from './MenuHome';
 
-export default function Content() {
+export default function Content({ cakes }) {
   return (
     <div className={s.content}>
-      <Hero />
+      {/* <Hero /> */}
+      <MenuHome cakes={cakes} />
+      {/* <MenuHome /> */}
     </div>
   );
 }

@@ -19,8 +19,8 @@ body {
 
 #__next {
   min-height: 100vh;
-  display: grid;
-  grid-auto-rows: auto 1fr auto;
+  //   display: grid;
+  //   grid-auto-rows: auto 1fr auto;
 }
 
 main {
@@ -58,6 +58,6 @@ a {
 }
 
 .wrapper {
-//   max-width: 1240px;
+  //   max-width: 1240px;
   //   border: 1px solid red;
 }

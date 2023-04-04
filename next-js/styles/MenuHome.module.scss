@@ -1,0 +1,191 @@
+.menuContainer {
+  width: 100%;
+  //   border: 1px red solid;
+  //   background-color: rgb(0, 255, 76);
+  margin-bottom: 100px;
+  @apply flex flex-col;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 207px;
+  }
+}
+
+.titleHolder {
+  width: 100%;
+  padding-left: 115px;
+  margin-bottom: 60px;
+  @apply flex flex-col;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 173px;
+    margin-bottom: 120px;
+    @apply flex flex-row items-end;
+  }
+}
+
+.title {
+  width: 117px;
+  height: 60px;
+  margin-bottom: 8px;
+
+  @media screen and (min-width: 768px) {
+    width: 156px;
+    height: 60px;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+.subTitle {
+  width: 225px;
+  height: 32px;
+
+  @media screen and (min-width: 768px) {
+    width: 281px;
+    height: 40px;
+  }
+}
+///////////////////////////////////////////////////
+.swiper {
+  display: flex;
+  width: 100%;
+  height: auto;
+
+  @media screen and (min-width: 1024px) {
+    width: 75%;
+  }
+  //   @apply max-lg:w-3/4;
+}
+
+.slide {
+  width: 250px;
+  display: flex;
+  align-items: center;
+
+  //   justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    width: 250px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 325px;
+  }
+}
+
+.card {
+  //   width: 200px;
+  width: 100%;
+  //   display: grid;
+
+  border-radius: 5px;
+  border: 1px solid #c4b2b2;
+  background: linear-gradient(to bottom, rgba(233, 223, 223, 0.7) 0%, rgba(245, 155, 155, 0.5));
+  box-shadow: 0px 30px 60px -5px #000;
+  font-size: 20px;
+  color: #000;
+  //   margin-bottom: 20px;
+
+  &.avalible {
+    background: linear-gradient(
+      to bottom,
+      rgba(210, 209, 213, 0.9) 0%,
+      rgba(132, 130, 132, 0.9) 100%
+    );
+  }
+
+  @media screen and (min-width: 768px) {
+    // width: 325px;
+    // grid-template-columns: 1fr 1fr;
+  }
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  //   width: 200px;
+
+  @media screen and (min-width: 768px) {
+    width: 250px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 325px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.btnAdd {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(236, 111, 111, 0.7);
+  margin-bottom: 15px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #cb5149;
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.iconHolder {
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+}
+
+.link {
+  @apply flex flex-col w-1/4;
+}
+
+// // .cardsContainer {
+// //   @media screen and (min-width: 1440px) {
+// //     padding-right: 80px;
+// //   }
+// // }
+
+// // .cards {
+// //   display: grid;
+// //   grid-template-rows: repeat(1, 1fr);
+// //   gap: 2rem;
+
+// //   @media screen and (min-width: 1024px) {
+// //     grid-template-columns: 1fr 1fr;
+// //   }
+// // }
+
+// .container {
+//   padding: 10px 10px;
+//   justify-content: center;
+//   background-color: darkblue;
+// }
+
+// .card {
+//   width: 100%;
+//   padding: 10px 10px;
+//   justify-content: center;
+//   background-color: rgb(192, 233, 54);
+// }
+
+// .swiperHolder {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+
+//     background-color: red;
+//     border: 1px solid blue;
+
+//     width: 100%;
+//     max-width: 100%;
+//   }

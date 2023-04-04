@@ -6,6 +6,7 @@ import Socials from '@/components/Socials';
 import Content from '@/components/Content';
 import Hero from '@/components/Hero';
 import Menu from './menu';
+import MenuHome from '@/components/MenuHome';
 
 export const getStaticProps = async () => {
   try {
@@ -47,10 +48,8 @@ export default function Home({ socials, cakes }) {
       <Head>
         <title>Home</title>
       </Head>
-      <Content />
-      {/* <Menu /> */}
+      <Content cakes={cakes} />
       {/* <Socials socials={socials} /> */}
-      
     </div>
   );
 }
