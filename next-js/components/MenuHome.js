@@ -55,15 +55,9 @@ export default function MenuHome({ cakes }) {
             },
           }}
         >
-          <SwiperSlide className='bg-gray-400'>
-            <Image src='/img/main_404/404.png' width={570} height={340} alt='preview' />
-          </SwiperSlide>
-          <SwiperSlide className='bg-gray-400'>
-            <Image src='/img/main_404/404.png' width={570} height={340} alt='preview' />
-          </SwiperSlide>
-          <SwiperSlide className='bg-gray-400'>
-            <Image src='/img/main_404/404.png' width={570} height={340} alt='preview' />
-          </SwiperSlide>
+          <SwiperSlide className='bg-gray-400'>Slide 1</SwiperSlide>
+          <SwiperSlide className='bg-gray-400'>Slide 1</SwiperSlide>
+          <SwiperSlide className='bg-gray-400'>Slide 1</SwiperSlide>
           {/* {cakes &&
             cakes.map((cake) => (
               <SwiperSlide key={cake.id} className={`${s.slide}`}>
