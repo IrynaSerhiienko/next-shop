@@ -52,8 +52,8 @@ export default function MenuHome({ cakes }) {
         >
           {cakes &&
             cakes.map((cake) => (
-              <SwiperSlide className={`${s.slide}`}>
-                <div key={cake.id} className={s.card}>
+              <SwiperSlide key={cake.id} className={`${s.slide}`}>
+                <div className={s.card}>
                   <Image
                     src={cake.image}
                     alt={cake.name}
