@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode } from 'swiper';
+import { FreeMode, Autoplay } from 'swiper';
 import Image from 'next/image';
 import Link from 'next/link';
 import s from '@/styles/MenuHome.module.scss';
@@ -32,7 +32,12 @@ export default function MenuHome({ cakes }) {
         <Swiper
           freeMode={true}
           grabCursor={true}
-          modules={[FreeMode]}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[FreeMode, Autoplay]}
           className='mySwiper'
           breakpoints={{
             0: {
@@ -50,7 +55,16 @@ export default function MenuHome({ cakes }) {
             },
           }}
         >
-          {cakes &&
+          <SwiperSlide className='bg-gray-400'>
+            <Image src='/img/main_404/404.png' width={570} height={340} alt='preview' />
+          </SwiperSlide>
+          <SwiperSlide className='bg-gray-400'>
+            <Image src='/img/main_404/404.png' width={570} height={340} alt='preview' />
+          </SwiperSlide>
+          <SwiperSlide className='bg-gray-400'>
+            <Image src='/img/main_404/404.png' width={570} height={340} alt='preview' />
+          </SwiperSlide>
+          {/* {cakes &&
             cakes.map((cake) => (
               <SwiperSlide key={cake.id} className={`${s.slide}`}>
                 <div className={s.card}>
@@ -90,7 +104,7 @@ export default function MenuHome({ cakes }) {
                   </div>
                 </div>
               </SwiperSlide>
-            ))}
+            ))} */}
         </Swiper>
       </div>
 
