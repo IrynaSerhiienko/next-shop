@@ -10,7 +10,8 @@ import MenuHome from '@/components/MenuHome';
 
 export const getStaticProps = async () => {
   try {
-    const response = await axios.get('http://localhost:3000/api/cakes/');
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/cakes/`);
+    // const response = await axios.get('http://localhost:3000/api/cakes/');
     const cakes = response.data;
     console.log(cakes);
 

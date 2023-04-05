@@ -32,11 +32,11 @@ export default function MenuHome({ cakes }) {
         <Swiper
           freeMode={true}
           grabCursor={true}
-        //   loop={true}
-        //   autoplay={{
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        //   }}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           modules={[FreeMode, Autoplay]}
           className='mySwiper'
           breakpoints={{
