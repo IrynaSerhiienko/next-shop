@@ -6,7 +6,7 @@ export default function Content({ cakes }) {
   return (
     <div className={s.content}>
       {/* <Hero /> */}
-      {/* <MenuHome cakes={cakes} /> */}
+      <MenuHome cakes={cakes} />
     </div>
   );
 }
