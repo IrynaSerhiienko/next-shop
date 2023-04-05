@@ -68,10 +68,12 @@ export default function GalleryContent({ gallery }) {
               <div key={cake.id} className={`${s.card}`}>
                 <Image
                   src={cake.image}
-                  alt={cake.name}
+                  alt={cake.name || 'Cake image'}
+                  //   alt={cake.name}
                   width={500}
                   height={668}
                   className={s.img}
+                  loading='eager'
                 />
               </div>
             ))}

@@ -55,10 +55,10 @@ export default function MenuHome({ cakes }) {
             },
           }}
         >
+          {/* <SwiperSlide className='bg-gray-400'>Slide 1</SwiperSlide>
           <SwiperSlide className='bg-gray-400'>Slide 1</SwiperSlide>
-          <SwiperSlide className='bg-gray-400'>Slide 1</SwiperSlide>
-          <SwiperSlide className='bg-gray-400'>Slide 1</SwiperSlide>
-          {/* {cakes &&
+          <SwiperSlide className='bg-gray-400'>Slide 1</SwiperSlide> */}
+          {cakes &&
             cakes.map((cake) => (
               <SwiperSlide key={cake.id} className={`${s.slide}`}>
                 <div className={s.card}>
@@ -98,7 +98,7 @@ export default function MenuHome({ cakes }) {
                   </div>
                 </div>
               </SwiperSlide>
-            ))} */}
+            ))}
         </Swiper>
       </div>
 
