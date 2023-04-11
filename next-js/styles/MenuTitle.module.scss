@@ -1,0 +1,42 @@
+.titleHolder {
+  @apply flex flex-col;
+  width: 100%;
+  padding-left: 115px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    @apply flex flex-row items-end;
+    padding-left: 173px;
+    margin-bottom: 120px;
+  }
+}
+
+.title {
+  transform: translate3d(0, 0, 0);
+
+  width: 117px;
+  height: auto;
+  margin-bottom: 8px;
+  // height: 60px;
+
+  @media screen and (min-width: 768px) {
+    width: 156px;
+    height: auto;
+    margin-bottom: 0;
+    margin-right: 20px;
+    //height: 60px;
+  }
+}
+
+.subTitle {
+  transform: translate3d(0, 0, 0);
+
+  width: 225px;
+  height: auto;
+  // height: 32px;
+
+  @media screen and (min-width: 768px) {
+    width: 281px;
+    // height: 40px;
+  }
+}

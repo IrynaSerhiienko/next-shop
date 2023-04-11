@@ -1,50 +1,15 @@
 .menuContainer {
   width: 100%;
-  //   border: 1px red solid;
-  //   background-color: rgb(0, 255, 76);
   margin-bottom: 100px;
   @apply flex flex-col;
+  //border: 1px red solid;
+  //background-color: rgb(0, 255, 76);
 
   @media screen and (min-width: 768px) {
     margin-bottom: 207px;
   }
 }
 
-.titleHolder {
-  width: 100%;
-  padding-left: 115px;
-  margin-bottom: 60px;
-  @apply flex flex-col;
-
-  @media screen and (min-width: 768px) {
-    padding-left: 173px;
-    margin-bottom: 120px;
-    @apply flex flex-row items-end;
-  }
-}
-
-.title {
-  width: 117px;
-  height: 60px;
-  margin-bottom: 8px;
-
-  @media screen and (min-width: 768px) {
-    width: 156px;
-    height: 60px;
-    margin-bottom: 0;
-    margin-right: 20px;
-  }
-}
-
-.subTitle {
-  width: 225px;
-  height: 32px;
-
-  @media screen and (min-width: 768px) {
-    width: 281px;
-    height: 40px;
-  }
-}
 ///////////////////////////////////////////////////
 .swiper {
   display: flex;

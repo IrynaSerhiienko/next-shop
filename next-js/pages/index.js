@@ -26,6 +26,18 @@ export const getStaticProps = async () => {
   }
 };
 
+export default function Home({ socials, cakes }) {
+  return (
+    <div className={s.wrapper}>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <Content cakes={cakes} />
+      {/* <Socials socials={socials} /> */}
+    </div>
+  );
+}
+
 // export const getStaticProps = async () => {
 //   try {
 //     const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/socials/`);
@@ -42,18 +54,6 @@ export const getStaticProps = async () => {
 //     };
 //   }
 // };
-
-export default function Home({ socials, cakes }) {
-  return (
-    <div className={s.wrapper}>
-      <Head>
-        <title>Home</title>
-      </Head>
-      <Content cakes={cakes} />
-      {/* <Socials socials={socials} /> */}
-    </div>
-  );
-}
 
 // export const getStaticProps = async () => {
 //   try {

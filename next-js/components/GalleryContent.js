@@ -69,52 +69,17 @@ export default function GalleryContent({ gallery }) {
                 <Image
                   src={cake.image}
                   alt={cake.name || 'Cake image'}
-                  //   alt={cake.name}
                   width={500}
                   height={668}
                   className={s.img}
-                  loading='eager'
+                  priority={true}
+                  //alt={cake.name}
+                  // loading='eager'
                 />
               </div>
             ))}
         </div>
       </div>
-
-      {/* <div className={s.cuadricula}>
-        <div className={s.item}>
-          <p>1</p>
-        </div>
-        <div className={s.item}>
-          <p>2</p>
-        </div>
-        <div className={s.item}>
-          <p>3</p>
-        </div>
-        <div className={s.item}>
-          <p>4</p>
-        </div>
-        <div className={s.item}>
-          <p>5</p>
-        </div>
-        <div className={s.item}>
-          <p>6</p>
-        </div>
-        <div className={s.item}>
-          <p>7</p>
-        </div>
-        <div className={s.item}>
-          <p>8</p>
-        </div>
-        <div className={s.item}>
-          <p>9</p>
-        </div>
-        <div className={s.item}>
-          <p>10</p>
-        </div>
-        <div className={s.item}>
-          <p>11</p>
-        </div>
-      </div> */}
     </>
   );
 }

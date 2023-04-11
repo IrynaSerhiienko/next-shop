@@ -1,0 +1,12 @@
+.logo {
+  @apply flex items-center hover:cursor-pointer;
+}
+
+.logoIcon {
+  transform: translate3d(0, 0, 0);
+}
+
+.logoText {
+  transform: translate3d(0, 0, 0);
+  width: auto;
+}

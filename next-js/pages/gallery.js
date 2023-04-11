@@ -32,9 +32,46 @@ export default function Gallery({ gallery }) {
             <title>Gallery</title>
           </Head>
 
-          <div className={s.title}>
-            <Image src='/img/main_gallery/frame.png' width={450} height={68} alt='preview' />
+          <div className={s.titleHolder}>
+            <Image
+              className={s.title}
+              alt='title Gallery '
+              style={{ transform: 'translate3d(0, 0, 0)', width: 'auto' }}
+              src='/img/main_gallery/gallery_title.svg'
+              width={176}
+              height={70}
+              loading='eager'
+              // style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'cover' }}
+            />
+
+            <Image
+              className={s.subTitle}
+              alt='subTitle Our exquisite designs'
+              style={{ transform: 'translate3d(0, 0, 0)', width: 'auto' }}
+              src='/img/main_gallery/gallery_subtitle.svg'
+              width={254}
+              height={40}
+              loading='eager'
+              // style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'cover' }}
+            />
           </div>
+
+          {/* <div className={s.title}>
+            <Image
+              alt='title our exquisite designs '
+              style={{ transform: 'translate3d(0, 0, 0)' }}
+              src='/img/main_gallery/frame.png'
+              width={450}
+              height={68}
+              loading={'eager'}
+              sizes='(max-width: 640px) 100vw,
+              (max-width: 768px) 33vw,
+              (max-width: 1280px) 25vw'
+              //   loading={id < 4 ? 'eager' : 'lazy'}
+              //   placeholder='blur'
+              //   blurDataURL={blurDataUrl}
+            />
+          </div> */}
 
           <div className={s.gallerySection}>{gallery && <GalleryContent gallery={gallery} />}</div>
         </div>
