@@ -1,18 +1,6 @@
-import { useState, useMemo } from 'react';
 import s from '@/styles/MenuLists.module.scss';
 
-export default function MenuLists({cakes}) {
-const [selectedCategory, setSelectedCategory] = useState('all');
-
-const filteredCakes = useMemo(() => {
-    if (selectedCategory === 'all') {
-      return cakes;
-    } else {
-      return cakes.filter((cake) =>
-        cake.category.toLowerCase().includes(selectedCategory.toLowerCase()),
-      );
-    }
-  }, [cakes, selectedCategory]);
+export default function MenuLists({selectedCategory, setSelectedCategory}) {
 
   return (
     <>

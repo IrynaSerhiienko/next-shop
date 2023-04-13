@@ -5,11 +5,10 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
-import s from '@/styles/SwiperJS.module.scss';
+import s from '@/styles/SwiperJSAllCakes.module.scss';
 import Card from './Card';
 
-// export default function SwiperJS({ cakes }) {
-export default function SwiperJS({ filteredCakes }) {
+export default function SwiperJSAllCakes({ cakes }) {
   return (
     <div className={s.swiperHolder}>
         <Swiper
@@ -38,8 +37,8 @@ export default function SwiperJS({ filteredCakes }) {
             },
           }}
         >
-            {filteredCakes &&
-            filteredCakes.map((cake) => (
+            {cakes &&
+            cakes.map((cake) => (
               <SwiperSlide key={cake.id} className={s.slide}>
                 <Card cake={cake}/>
               </SwiperSlide>

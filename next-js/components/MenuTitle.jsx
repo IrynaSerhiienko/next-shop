@@ -10,7 +10,7 @@ export default function MenuTitle() {
           src='/img/main_menu/menu_title.svg'
           width={114}
           height={44}
-          // priority={true}
+          priority={true}
         />
 
         <Image
@@ -19,7 +19,7 @@ export default function MenuTitle() {
           src='/img/main_menu/menu_subtitle.svg'
           width={227}
           height={24}
-          // priority={true}
+          priority={true}
         />
     </div>
   )

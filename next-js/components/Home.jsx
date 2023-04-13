@@ -1,9 +1,9 @@
-import s from '../styles/Content.module.scss';
-import AboutUsHome from './AboutUsHome';
+import s from '../styles/Home.module.scss';
+// import AboutUsHome from './AboutUsHome';
 // import Hero from './Hero';
 import MenuHome from './MenuHome';
 
-export default function Content({ cakes }) {
+export default function Home({ cakes }) {
   return (
     <div className={s.content}>
       {/* <Hero /> */}

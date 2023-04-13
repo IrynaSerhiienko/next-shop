@@ -3,7 +3,7 @@ import Head from 'next/head';
 import s from '@/styles/Home.module.scss';
 import Heading from '@/components/Heading';
 import Socials from '@/components/Socials';
-import Content from '@/components/Content';
+import Content from '@/components/Home';
 import Hero from '@/components/Hero';
 import Menu from './menu';
 import MenuHome from '@/components/MenuHome';

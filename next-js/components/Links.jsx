@@ -3,13 +3,13 @@ import { useRouter } from 'next/router';
 import s from '../styles/Links.module.scss';
 
 const navigation = [
-    { id: 1, title: 'Home', path: '/' },
-    { id: 2, title: 'Menu', path: '/menu' },
-    { id: 3, title: 'Gallery', path: '/gallery' },
-    { id: 4, title: 'About Us', path: '/aboutUs' },
-    { id: 5, title: 'Payment & Delivery', path: '/paymentDelivery' },
-    { id: 6, title: 'Reviews', path: '/reviews' },
-    { id: 7, title: 'Contacts', path: '/contacts' },
+    { id: 1, title: 'home', path: '/' },
+    { id: 2, title: 'menu', path: '/menu' },
+    { id: 3, title: 'gallery', path: '/gallery' },
+    { id: 4, title: 'about us', path: '/aboutUs' },
+    { id: 5, title: 'payment & delivery', path: '/paymentDelivery' },
+    { id: 6, title: 'reviews', path: '/reviews' },
+    { id: 7, title: 'contacts', path: '/contacts' },
     //   { id: 8, title: 'Posts', path: '/posts' },
 ];
 

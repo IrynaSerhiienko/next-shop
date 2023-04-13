@@ -21,11 +21,7 @@
   }
 }
 
-.aside {
-  //   width: 40%;
-}
-
-.asideContainer {
+.container {
   //   display: none;
 
   @media screen and (min-width: 768px) {
@@ -41,12 +37,6 @@
   }
 }
 
-.cardsContainer {
-  @media screen and (min-width: 1440px) {
-    padding-right: 80px;
-  }
-}
-
 .cards {
   display: grid;
   grid-template-rows: repeat(1, 1fr);
@@ -59,6 +49,10 @@
 
   @media screen and (min-width: 1024px) {
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-right: 80px;
   }
 }
 
