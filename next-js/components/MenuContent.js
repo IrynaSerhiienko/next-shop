@@ -38,56 +38,79 @@ export default function MenuContent({ cakes }) {
   }, []);
 
   return (
-    <div className={s.container}>
-      <MenuLists selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+    <>
       {debouncedIsMobile[0] ? (
-        <>
+        <div className={s.container}>
+          <MenuLists
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
           <SwiperJS filteredCakes={filteredCakes} />
           <MenuText />
-        </>
+        </div>
       ) : (
         <>
-          <MenuText />
+          <div className={s.container}>
+            <MenuLists
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
+            />
+            <MenuText />
+          </div>
+
           <div className={s.cards}>
             {filteredCakes && filteredCakes.map((cake) => <Card cake={cake} key={cake.id} />)}
           </div>
         </>
-        // <>
-        //   <div className={s.cards}>
-        //     {filteredCakes && filteredCakes.map((cake) => <Card cake={cake} key={cake.id} />)}
-        //   </div>
-        //   <MenuText />
-        // </>
       )}
-    </div>
-    // <>
+    </>
+
+    // <div className={s.container}>
+    //   <MenuLists selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
     //   {debouncedIsMobile[0] ? (
-    //     <div className={s.container}>
-    //       <MenuLists
-    //         selectedCategory={selectedCategory}
-    //         setSelectedCategory={setSelectedCategory}
-    //       />
+    //     <>
     //       <SwiperJS filteredCakes={filteredCakes} />
     //       <MenuText />
-    //     </div>
+    //     </>
     //   ) : (
     //     <>
-    //       <div className={s.container}>
-    //         <MenuLists
-    //           selectedCategory={selectedCategory}
-    //           setSelectedCategory={setSelectedCategory}
-    //         />
-    //         <MenuText />
-    //       </div>
-
+    //       <MenuText />
     //       <div className={s.cards}>
     //         {filteredCakes && filteredCakes.map((cake) => <Card cake={cake} key={cake.id} />)}
     //       </div>
     //     </>
     //   )}
-    // </>
+    // </div>
   );
 }
+
+// <>
+//   {debouncedIsMobile[0] ? (
+//     <div className={s.container}>
+//       <MenuLists
+//         selectedCategory={selectedCategory}
+//         setSelectedCategory={setSelectedCategory}
+//       />
+//       <SwiperJS filteredCakes={filteredCakes} />
+//       <MenuText />
+//     </div>
+//   ) : (
+//     <>
+//       <div className={s.container}>
+//         <MenuLists
+//           selectedCategory={selectedCategory}
+//           setSelectedCategory={setSelectedCategory}
+//         />
+//         <MenuText />
+//       </div>
+
+//       <div className={s.cards}>
+//         {filteredCakes && filteredCakes.map((cake) => <Card cake={cake} key={cake.id} />)}
+//       </div>
+//     </>
+//   )}
+// </>
+
 // <>
 //   {isMobile ? (
 //     <>
@@ -118,7 +141,6 @@ export default function MenuContent({ cakes }) {
 //     </>
 //   )}
 // </>
-////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////
 // <>

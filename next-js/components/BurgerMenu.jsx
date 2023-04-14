@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import styles from './BurgerMenu.module.scss';
+import s from '../styles/BurgerMenu.module.scss';
+// import Image from 'next/image';
 
-const NavMenu = dynamic(() => import('./NavMenu'), { ssr: false });
-// const NavMenu = dynamic(() => import('./NavMenu'), { ssr: false });
+const Navbar = dynamic(() => import('./Navbar'), { ssr: false });
+
 
 export default function BurgerMenu() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,15 +14,26 @@ export default function BurgerMenu() {
   };
 
   return (
-    <div className={styles.burgerMenu}>
-      <div className={styles.burgerIcon} onClick={toggleMenu}>
+    <div className={s.burgerMenu}>
+      <div className={s.burgerIcon} onClick={toggleMenu}>
         <div />
         <div />
         <div />
       </div>
+      {/* <Navbar onClose={toggleMenu} className={menuOpen ? s.menuOpen : ''} /> */}
       {menuOpen && (
-        <NavMenu onClose={toggleMenu} />
+        <Navbar onClose={toggleMenu} />
       )}
     </div>
   );
 };
+
+
+{/* <Image
+            alt='burger-menu-open'
+            src='/img/burger_menu/menu-open.svg'
+            width={28}
+            height={10}
+            priority={true}
+            // style={{ transform: 'translate3d(0, 0, 0)'}}
+        /> */}
