@@ -4,11 +4,11 @@ import Logo from './Logo';
 import Links from './Links';
 import BurgerMenu from './BurgerMenu';
 import s from '../styles/Navbar.module.scss';
-// import { useRouter } from 'next/router';
 
 export default function Navbar() {
   const [isMobile, setIsMobile] = useState(
-    typeof window !== 'undefined' ? window.innerWidth < 1024 : false,
+    typeof window !== 'undefined' ? window.innerWidth < 1135 : false,
+    // typeof window !== 'undefined' ? window.innerWidth < 1024 : false,
   );
 
   const debouncedIsMobile = useDebounce(isMobile, 500);
@@ -16,7 +16,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
+    //   setIsMobile(window.innerWidth < 1024);
+      setIsMobile(window.innerWidth < 1135);
     };
 
     window.addEventListener('resize', handleResize);

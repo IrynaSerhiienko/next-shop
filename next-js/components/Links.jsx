@@ -1,8 +1,8 @@
 import Link from "next/link"
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import s from '../styles/Links.module.scss';
-// import { useState } from "react";
 
 const navigation = [
     { id: 1, title: 'home', path: '/' },
@@ -17,6 +17,15 @@ const navigation = [
 
 export default function Links({ isMobile, isMenuOpen, toggleMenu }) {
     const { pathname } = useRouter();
+    const [showOverlay, setShowOverlay] = useState(false);
+
+    useEffect(() => {
+        setShowOverlay(isMenuOpen);
+    }, [isMenuOpen] )
+
+    const toggleOverlay = () => {
+        setShowOverlay(!showOverlay);
+    };
 
     return (
         <>
@@ -42,6 +51,7 @@ export default function Links({ isMobile, isMenuOpen, toggleMenu }) {
                 </Link>
                 ))}
             </div>
+            {showOverlay && <div className={s.overlay} onClick={toggleOverlay}></div>}
         </>
     )
 }

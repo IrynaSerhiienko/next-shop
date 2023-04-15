@@ -2,12 +2,6 @@
   display: flex;
   justify-content: flex-end;
   width: 75%;
-  //   height: 100%;
-  //   display: none;
-
-  //   @media screen and (min-width: 1440px) {
-  //     display: block;
-  //   }
 
   a {
     font-style: normal;
@@ -51,15 +45,33 @@
     color: #6b4845;
     padding-left: 15px;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 375px) {
+      padding-left: 25px;
+    }
   }
 
   .line {
     border-top: 1px solid #cf4f48;
     margin-bottom: 20px;
+    margin-right: 15px;
   }
 
   .buttonClose {
     align-self: self-end;
     margin: 0 20px 23px 0;
   }
+
+  @media screen and (min-width: 375px) {
+    max-width: 245px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
