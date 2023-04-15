@@ -5,9 +5,9 @@
   //   height: 100%;
   //   display: none;
 
-  @media screen and (min-width: 1440px) {
-    display: block;
-  }
+  //   @media screen and (min-width: 1440px) {
+  //     display: block;
+  //   }
 
   a {
     font-style: normal;
@@ -32,80 +32,34 @@
   }
 }
 
-/////////////////
-// .hide {
-//   display: none;
-// }
+.linksMobile {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 65%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #e9e0e0;
+  padding-top: 27px;
+  z-index: 10;
 
-// .burger {
-//   padding: 10px;
-//   border: 1px solid;
-//   border-radius: 10px;
-//   width: 20px;
-//   height: 20px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   cursor: pointer;
-// }
+  a {
+    align-self: self-start;
+    font-size: 20px;
+    line-height: 24px;
+    color: #6b4845;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
 
-// .burgerClose {
-//   display: none;
-// }
+  .line {
+    border-top: 1px solid #cf4f48;
+    margin-bottom: 20px;
+  }
 
-// // .burger.open .burger__close {
-// //     display: block;
-// // }
-
-// .burger {
-//   &.open {
-//     .burgerСlose {
-//       display: block;
-//     }
-//   }
-// }
-
-// // .burger.open .burger__open {
-// //   display: none;
-// // }
-// .burger {
-//   &.open {
-//     .burgerOpen {
-//       display: none;
-//     }
-//   }
-// }
-
-// .nav {
-//   background: rgba(0, 0, 0, 0.603);
-//   padding: 20px;
-//   position: fixed;
-//   width: 100vw;
-//   height: 100vh;
-//   top: 0;
-//   left: 0;
-
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .modal {
-//   background: #e9e0e0;
-//   padding: 20px;
-//   border-radius: 20px;
-//   width: 200px;
-//   //   height: 851px;
-//   position: relative;
-// }
-
-// .modalClose {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   cursor: pointer;
-// }
-
-// .hide {
-//   display: none;
-// }
+  .buttonClose {
+    align-self: self-end;
+    margin: 0 20px 23px 0;
+  }
+}

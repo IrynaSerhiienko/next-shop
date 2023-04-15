@@ -1,4 +1,3 @@
-// import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useDebounce } from 'use-debounce';
 import Logo from './Logo';
@@ -13,6 +12,7 @@ export default function Navbar() {
   );
 
   const debouncedIsMobile = useDebounce(isMobile, 500);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,28 +26,21 @@ export default function Navbar() {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+
   return (
     <nav className={s.nav}>
       <Logo />
-      {debouncedIsMobile[0] ? (<BurgerMenu />) : (<Links />)}
+      {debouncedIsMobile[0] ?
+        (<BurgerMenu isMenuOpen={isMenuOpen} isMobile={isMobile} toggleMenu={toggleMenu}/>) :
+        (isMenuOpen ? null : <Links isMobile={isMobile}/>)}
     </nav>
   );
-
-//   return (
-//     <nav className={s.nav}>
-//       <Logo />
-//       <Links />
-//       {/* {debouncedIsMobile[0] && <BurgerMenu />} */}
-//     </nav>
-//   );
 }
 
-/* 
-  <div className={isMobile ? s.burgerMenu : s.links}> 
-  <button className={s.burgerMenu}>
-        {isMobile ? (
-          <Image src='/img/burger_menu/menu-open.svg' width={28} height={10} alt='menu-open' />
-        ) : (
-          <Image src='/img/burger_menu/menu-close.svg' width={20} height={10} alt='menu-close' />
-        )}
-      </button> */
+
+
+
