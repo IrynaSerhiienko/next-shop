@@ -15,7 +15,7 @@ const navigation = [
     //   { id: 8, title: 'Posts', path: '/posts' },
 ];
 
-export default function Links({ isMobile, isMenuOpen, toggleMenu }) {
+export default function Links({ isMobile, isMenuOpen, toggleMenu}) {
     const { pathname } = useRouter();
     const [showOverlay, setShowOverlay] = useState(false);
 
@@ -29,11 +29,20 @@ export default function Links({ isMobile, isMenuOpen, toggleMenu }) {
 
     return (
         <>
-            <div className={isMobile ? s.linksMobile : s.links}>
+            <div className={`${isMobile ? s.linksMobile : s.links} ${isMenuOpen ? s.open : ''}`}>
+
+            {/* <div className={`${isMobile ? s.linksMobile : s.links}`}
+                style={{
+                transform: isMobile && isMenuOpen ? 'translateX(0)' : 'translateX(100%)',
+                transition: 'transform 0.3s ease-in-out'
+                }}
+            > */}
+
                 {isMenuOpen && (
                     <>
                         <button className={s.buttonClose} onClick={toggleMenu}>
                             <Image
+                                // className="open"
                                 alt='burger-menu-close'
                                 src='/img/burger_menu/menu-close.svg'
                                 width={28}

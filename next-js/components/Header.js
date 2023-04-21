@@ -1,12 +1,14 @@
 import s from '@/styles/Header.module.scss';
 
-import Navbar from './Navbar';
+import Navbar1 from './Navbar1';
+// import Navbar1 from './Navbar';
 
 export default function Header() {
   return (
     <header className={s.header}>
       <div className={s.wrapper}>
-        <Navbar />
+        <Navbar1 />
+        {/* <Navbar /> */}
       </div>
     </header>
   );

@@ -12,6 +12,7 @@ export default function Navbar() {
   );
 
   const debouncedIsMobile = useDebounce(isMobile, 500);
+//   const [isMenuOpen, setIsMenuOpen] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
