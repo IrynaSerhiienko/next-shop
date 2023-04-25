@@ -2,23 +2,12 @@ import Link from "next/link"
 import { useRouter } from 'next/router';
 import s from '../styles/Navbar1.module.scss';
 
-const navigation = [
-    { id: 1, title: 'home', path: '/' },
-    { id: 2, title: 'menu', path: '/menu' },
-    { id: 3, title: 'gallery', path: '/gallery' },
-    { id: 4, title: 'about us', path: '/aboutUs' },
-    { id: 5, title: 'payment & delivery', path: '/paymentDelivery' },
-    { id: 6, title: 'reviews', path: '/reviews' },
-    { id: 7, title: 'contacts', path: '/contacts' },
-    //   { id: 8, title: 'Posts', path: '/posts' },
-];
-
-export default function Links1() {
+export default function Links1({links}) {
     const { pathname } = useRouter();
 
     return (
         <>
-            {navigation.map(({ id, title, path }) => (
+            {links.map(({ id, title, path }) => (
                 <Link legacyBehavior key={id} href={path}>
                     <a className={pathname === path ? s.active : null}>{title}</a>
                 </Link>

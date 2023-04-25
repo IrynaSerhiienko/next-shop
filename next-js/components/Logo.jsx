@@ -6,7 +6,7 @@ export default function Logo() {
   return (
     <Link href='/'>
         <div className={s.logo}>
-            <div className={s.logoIcon}>
+            {/* <div className={s.logoIcon}>
                 <Image
                     alt='logo-icon_cake'
                     src='/img/logo/logo-icon_yana_caker.svg'
@@ -14,7 +14,7 @@ export default function Logo() {
                     height={50}
                     // priority={true}
                 />
-            </div>
+            </div> */}
             <div className={s.logoText}>
                 <Image
                     alt='logo-text_yana_caker'
