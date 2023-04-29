@@ -1,29 +1,101 @@
+// .hero {
+//   display: flex;
+//   margin-bottom: 200px;
+//   //   border: 1px solid red;
+// }
+
+// .scroll {
+//   margin: 0 85px 0 170px;
+//   align-self: flex-end;
+//   padding-bottom: 44px;
+// }
+
+// .img {
+//   padding-top: 52px;
+// }
+
 .hero {
+  min-height: 650px;
+  display: flex;
+  margin-bottom: 100px;
   position: relative;
-  width: 100%;
-//   height: 670px;
-  margin-bottom: 240px;
+  border: 1px solid red;
 }
 
-.containerHero {
-  position: absolute;
-  top: 50px;
-  left: 40%;
-  z-index: 0;
-  background-size: contain;
-  //left: 800px;
+.containerLeft {
+  display: flex;
+  flex-direction: column;
+  //align-content: space-between;
+
+  .phone {
+    display: flex;
+    margin: 20px 0 0 0;
+    // align-self: start;
+  }
+
+  .scroll {
+    margin-top: auto;
+    display: flex;
+    justify-content: end;
+    justify-self: flex-end;
+    justify-items: end;
+    align-items: flex-end;
+    align-self: flex-end;
+    margin-right: 0px;
+    width: auto;
+    // margin: 0 85px 0 170px;
+    // padding-bottom: 44px;
+  }
 }
 
-.containerText {
-  position: absolute;
-  top: 350px;
-  left: 17%;
-  z-index: 1;
+.containerRight {
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    position: absolute;
+    top: 25%;
+    left: 0;
+  }
+
+  .img {
+    padding: 40px 0 0 20px;
+    margin: 0 0 100px 0;
+    //   justify-content: center;
+    //   display: flex;
+    //   margin: 40px 0 0 95px;
+    //   align-self: flex-end;
+  }
+
+  .text {
+    margin: 20px 0 0 26px;
+  }
 }
 
-.containerLogo {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  z-index: 1;
-}
+// .hero {
+//   position: relative;
+//   width: 100%;
+//   margin-bottom: 240px;
+// }
+
+// .containerHero {
+//   position: absolute;
+//   top: 50px;
+//   left: 40%;
+//   z-index: 0;
+//   background-size: contain;
+// }
+
+// .containerText {
+//   position: absolute;
+//   top: 350px;
+//   left: 17%;
+//   z-index: 1;
+// }
+
+// .containerLogo {
+//   position: absolute;
+//   top: 100px;
+//   left: 0;
+//   z-index: 1;
+// }

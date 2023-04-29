@@ -11,7 +11,7 @@ import Logo from './Logo';
 export default function Navbar1({navigation}) {
 
 const { width } = useWindowSize();
-const isMobile = width < 1024;
+const isMobile = width < 1130;
 // const isMobile = useMemo(() => width < 1024, [width]);
 // console.log("isMobile:", isMobile);
 
@@ -55,7 +55,7 @@ const [showOverlay, setShowOverlay] = useState(false);
         {isMobile ?
         (<>
             <nav className={s.navbar}>
-                <p>mobile view</p>
+                {/* <p>mobile view</p> */}
                 <Logo />
                 <div className={`${s.navItems} ${isOpen && s.open}`} onClick={()=> setIsOpen(!isOpen)}>
                     <Links1 links={navLinksLeft}/>
@@ -69,7 +69,7 @@ const [showOverlay, setShowOverlay] = useState(false);
         </>) :
         (<>
             <nav className={s.navbar}>
-                <p>desktop view</p>
+                {/* <p>desktop view</p> */}
                 <Location/>
                 <div className={`${s.navItems} ${isOpen && s.open}`} onClick={()=> setIsOpen(!isOpen)}>
                 <Links1 links={navLinksLeft}/>
