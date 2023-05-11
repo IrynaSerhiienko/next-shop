@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
 // import dynamic from 'next/dynamic';
+// const Call = dynamic(() => import('./call'), { ssr: false });
 
+// import Links1 from "./Links1";
 import Call from "./Call";
-import Links1 from "./Links1";
 import Location from "./Location";
 import Logo from "./Logo";
 
-// const Call = dynamic(() => import('./call'), { ssr: false });
+import LinksPart1 from "./LinksPart1";
+import LinksPart2 from "./LinksPart2";
 
 import s from "../styles/Navbar.module.scss";
 
 export default function Navbar() {
-
   const [mobile, setMobile] = useState(undefined);
   const [isOpen, setIsOpen] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
@@ -44,20 +45,6 @@ export default function Navbar() {
     };
   }, []);
 
-  const navLinksLeft = [
-    { id: 1, title: "home", path: "/" },
-    { id: 2, title: "about us", path: "/aboutUs" },
-    { id: 3, title: "menu", path: "/menu" },
-    { id: 4, title: "contacts", path: "/contacts" },
-  ];
-
-  const navLinksRight = [
-    { id: 5, title: "gallery", path: "/gallery" },
-    { id: 6, title: "payment & delivery", path: "/paymentDelivery" },
-    { id: 7, title: "reviews", path: "/reviews" },
-    // { id: 8, title: 'Posts', path: '/posts' },
-  ];
-
   return typeof mobile !== "undefined" ? (
     mobile ? (
       <>
@@ -67,8 +54,10 @@ export default function Navbar() {
             className={`${s.navItems} ${isOpen && s.open}`}
             onClick={() => setIsOpen(!isOpen)}
           >
-            <Links1 links={navLinksLeft} />
-            <Links1 links={navLinksRight} />
+            <LinksPart1 />
+            <LinksPart2 />
+            {/* <Links1 links={navLinksLeft} /> */}
+            {/* <Links1 links={navLinksRight} /> */}
           </div>
           <div
             className={`${s.navToggle} ${isOpen && s.open}`}
@@ -95,14 +84,16 @@ export default function Navbar() {
             className={`${s.navItems} ${isOpen && s.open}`}
             onClick={() => setIsOpen(!isOpen)}
           >
-            <Links1 links={navLinksLeft} />
+            <LinksPart1 />
+            {/* <Links1 links={navLinksLeft} /> */}
           </div>
           <Logo />
           <div
             className={`${s.navItems} ${isOpen && s.open}`}
             onClick={() => setIsOpen(!isOpen)}
           >
-            <Links1 links={navLinksRight} />
+            <LinksPart2 />
+            {/* <Links1 links={navLinksRight} /> */}
           </div>
           <div
             className={`${s.navToggle} ${isOpen && s.open}`}

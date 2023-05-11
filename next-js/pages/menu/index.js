@@ -37,15 +37,6 @@ export default function Menu({ menu }) {
   );
 }
 
-// export const getStaticProps = async () => {
-//   try {
-//     const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/menu/`);
-//     // const response = await axios.get('http://localhost:3000/api/cakes/');
-//     const menu = response.data;
-
-//     return {
-//       props: { menu },
-//     };
 //   } catch (error) {
 //     console.error(error);
 //     return {
