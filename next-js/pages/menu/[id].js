@@ -14,7 +14,9 @@ export const getStaticPaths = async () => {
         params: { id: cake.id.toString() },
       };
     });
-    //console.log('paths>>>', paths);
+
+    console.log('return paths>>>', paths);
+
     return {
       paths,
       fallback: false,
@@ -31,9 +33,12 @@ export const getStaticProps = async (context) => {
   try {
     let id = context.params.id;
     // const { id } = context.params;
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/menu?id=${id}`);
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/menu`);
+    // const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/menu?id=${id}`);
     const data = response.data;
+    console.log('Data:>>>', data);
     const cake = data.find((cake) => cake.id.toString() === id);
+    console.log('Cake:>>>', cake);
 
     return {
       props: { cake },
