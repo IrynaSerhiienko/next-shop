@@ -13,6 +13,7 @@ import s from '@/styles/Home.module.scss';
 export const getStaticProps = async () => {
   try {
     const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/menu/`);
+    console.log('response>>>', response);
     // const response = await axios.get('http://localhost:3000/api/cakes/');
     const menu = response.data;
     // console.log(cakes);
