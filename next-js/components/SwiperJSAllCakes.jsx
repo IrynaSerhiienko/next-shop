@@ -8,7 +8,7 @@ import 'swiper/css/free-mode';
 import s from '@/styles/SwiperJSAllCakes.module.scss';
 import Card from './Card';
 
-export default function SwiperJSAllCakes({ cakes }) {
+export default function SwiperJSAllCakes({ menu }) {
   return (
     <div className={s.swiperHolder}>
         <Swiper
@@ -37,8 +37,8 @@ export default function SwiperJSAllCakes({ cakes }) {
             },
           }}
         >
-            {cakes &&
-            cakes.map((cake) => (
+            {menu &&
+            menu.map((cake) => (
               <SwiperSlide key={cake.id} className={s.slide}>
                 <Card cake={cake}/>
               </SwiperSlide>

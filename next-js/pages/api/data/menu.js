@@ -1,7 +1,8 @@
-export const cakes = [
+export const menu = [
   {
     id: 1,
-    name: 'Cake "Black and white"',
+    name: 'Black and white',
+    // name: 'Cake "Black and white"',
     image: '/img/menu_all/image1.png',
     shortDescription: 'Black and white sponge cake layered with cream cheese frosting.',
     description:
@@ -13,7 +14,8 @@ export const cakes = [
   },
   {
     id: 2,
-    name: 'Cake "Caramel"',
+    name: 'Caramel',
+    // name: 'Cake "Caramel"',
     image: '/img/menu_all/image2.png',
     shortDescription: 'A cake with an air sponge, layered with caramel cream.',
     description:
@@ -25,7 +27,8 @@ export const cakes = [
   },
   {
     id: 3,
-    name: 'Cake "Strawberry Mousse"',
+    name: 'Strawberry Mousse',
+    // name: 'Cake "Strawberry Mousse"',
     image: '/img/menu_all/image3.png',
     shortDescription: 'Cake with delicate strawberry mousse and fresh berries.',
     description:
@@ -37,7 +40,8 @@ export const cakes = [
   },
   {
     id: 4,
-    name: 'Cake "Milk chocolate"',
+    name: 'Milk chocolate',
+    // name: 'Cake "Milk chocolate"',
     image: '/img/menu_all/image4.png',
     shortDescription: 'Cake with milk chocolate and air cream.',
     description:
@@ -49,7 +53,8 @@ export const cakes = [
   },
   {
     id: 5,
-    name: 'Cake "Forest meadow"',
+    name: 'Forest meadow',
+    // name: 'Cake "Forest meadow"',
     image: '/img/menu_all/image5.png',
     shortDescription:
       'The most delicate chocolate biscuit, cream cheese with lingonberries and raspberries.',
@@ -62,7 +67,8 @@ export const cakes = [
   },
   {
     id: 6,
-    name: 'Сake "Tiramisu"',
+    name: 'Tiramisu',
+    // name: 'Сake "Tiramisu"',
     image: '/img/menu_all/image6.png',
     shortDescription: 'Gentle cream based on mascarpone cheese, layered with coffee biscuits.',
     description:
@@ -74,7 +80,8 @@ export const cakes = [
   },
   {
     id: 7,
-    name: 'Cake "Blueberry Story"',
+    name: 'Blueberry Story',
+    // name: 'Cake "Blueberry Story"',
     image: '/img/menu_all/image7.png',
     shortDescription:
       'The most delicate vanilla biscuit, cream cheese with blueberries and hazelnuts.',
@@ -87,7 +94,8 @@ export const cakes = [
   },
   {
     id: 8,
-    name: 'Cake "Chamomile"',
+    name: 'Chamomile',
+    // name: 'Cake "Chamomile"',
     image: '/img/menu_all/image8.png',
     shortDescription: 'Delicate cake with cream and strawberries.',
     description:
@@ -99,7 +107,8 @@ export const cakes = [
   },
   {
     id: 9,
-    name: 'Cake "Raspberry"',
+    name: 'Raspberry',
+    // name: 'Cake "Raspberry"',
     image: '/img/menu_all/image9.png',
     shortDescription: 'Fragrant cake with raspberry cream.',
     description:
@@ -111,7 +120,8 @@ export const cakes = [
   },
   {
     id: 10,
-    name: 'Cake "Chocolate waterfall"',
+    name: 'Chocolate waterfall',
+    // name: 'Cake "Chocolate waterfall"',
     image: '/img/menu_all/image10.png',
     shortDescription: 'An incredible chocolate cake for sweet lovers.',
     description:
@@ -123,7 +133,8 @@ export const cakes = [
   },
   {
     id: 11,
-    name: 'Cake "Summer cocktail"',
+    name: 'Summer cocktail',
+    // name: 'Cake "Summer cocktail"',
     image: '/img/menu_all/image11.png',
     shortDescription: 'A light and refreshing cake with fruit cream and delicate biscuit.',
     description:
@@ -135,7 +146,8 @@ export const cakes = [
   },
   {
     id: 12,
-    name: 'Cake "Chamomile meadow"',
+    name: 'Chamomile meadow',
+    // name: 'Cake "Chamomile meadow"',
     image: '/img/menu_all/image12.png',
     shortDescription: 'Delicate cake with butter cream with warming notes of chamomile.',
     description:

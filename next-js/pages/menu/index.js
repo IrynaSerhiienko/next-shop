@@ -1,28 +1,39 @@
 import axios from 'axios';
 import Head from 'next/head';
-import s from '@/styles/Menu.module.scss';
+import Link from 'next/link';
+import Image from 'next/image';
 import MenuContent from '../../components/MenuContent';
 import MenuTitle from '@/components/MenuTitle';
-// import Link from 'next/link';
+import CardDetails from '@/components/CardDetails';
 
-export const getStaticProps = async (context) => {
-  try {
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/cakes/`);
-    // const response = await axios.get('http://localhost:3000/api/cakes/');
-    const cakes = response.data;
+import s from '@/styles/Menu.module.scss';
 
-    return {
-      props: { cakes },
-    };
-  } catch (error) {
-    console.error(error);
-    return {
-      notFound: true,
-    };
-  }
+export const getStaticProps = async () => {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/menu/`);
+  const data = await response.json();
+
+  return {
+    props: { menu: data },
+  };
 };
+// export const getStaticProps = async () => {
+//   try {
+//     const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/menu/`);
+//     // const response = await axios.get('http://localhost:3000/api/cakes/');
+//     const menu = response.data;
 
-export default function Menu({ cakes }) {
+//     return {
+//       props: { menu },
+//     };
+//   } catch (error) {
+//     console.error(error);
+//     return {
+//       notFound: true,
+//     };
+//   }
+// };
+
+export default function Menu({ menu }) {
   return (
     <>
       <section className={s.menu}>
@@ -30,10 +41,17 @@ export default function Menu({ cakes }) {
           <Head>
             <title>Menu</title>
           </Head>
-
           <MenuTitle />
+          {/* <ul>
+            {menu &&
+              menu.map(({ id, name }) => (
+                <li key={id}>
+                  <Link href={`/menu/${id}`}>{name}</Link>
+                </li>
+              ))}
+          </ul> */}
 
-          <div className={s.menuSection}>{cakes && <MenuContent cakes={cakes} />}</div>
+          <div className={s.menuSection}>{menu && <MenuContent menu={menu} />}</div>
         </div>
       </section>
     </>

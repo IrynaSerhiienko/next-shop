@@ -9,8 +9,9 @@ export default function Call() {
                 <Image
                     alt='callIcon'
                     src='/img/call/call.svg'
-                    width={30}
-                    height={30}
+                    fill
+                    // width={30}
+                    // height={30}
                     // priority={true}
                 />
             </div>

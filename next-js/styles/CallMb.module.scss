@@ -1,0 +1,17 @@
+.callIcon {
+  position: fixed;
+  width: 62px;
+  height: 80px;
+  top: 95px;
+  left: 0;
+  z-index: 2;
+
+  transform: translate3d(0, 0, 0);
+  color: #cf4f48;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+}

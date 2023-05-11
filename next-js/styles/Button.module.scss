@@ -1,0 +1,23 @@
+.btn {
+  display: block;
+  padding: 16px 60px;
+  margin: 0 0 100px 25%;
+  transition: all 0.4s ease-in-out;
+  background-color: #ebae82;
+  box-shadow: 0px 9px 33px rgba(56, 46, 47, 0.16);
+  border-radius: 40px;
+  
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #6b4845;
+  //   width: 171px;
+  //   height: 52px;
+  
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}

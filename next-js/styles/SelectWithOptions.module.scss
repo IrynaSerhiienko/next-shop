@@ -1,0 +1,27 @@
+.selectContainer {
+  display: flex;
+  margin: 0 0 40px 25%;
+  cursor: pointer;
+  background-color: #c4b2b2;
+  width: 116px;
+  height: 42px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  border: 1px solid #c4b2b2;
+  border-radius: 5px 5px 5px 5px;
+  color: #382e2f;
+  box-shadow: 0px 9px 33px rgba(56, 46, 47, 0.16);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+//   @media screen and (min-width: 375px) {
+//     width: 100%;
+//     max-width: 368px;
+//     height: 368px;
+//   }

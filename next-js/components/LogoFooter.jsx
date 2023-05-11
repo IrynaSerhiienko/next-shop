@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import s from '../styles/Logo.module.scss';
 
-export default function Logo({width, height}) {
+export default function LogoFooter({width, height}) {
     const logoStyles = {
         width: `${width}px`,
         height: `${height}px`
@@ -15,7 +15,7 @@ export default function Logo({width, height}) {
                 <Image
                     style={logoStyles}
                     alt='logo-text_yana_caker'
-                    src='/img/logo/logo-text_yana_caker.svg'
+                    src='/img/footer/logo-text_yana_caker.svg'
                     width={65}
                     height={44}
                     // priority={true}

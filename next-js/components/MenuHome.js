@@ -4,11 +4,11 @@ import MenuTitle from './MenuTitle';
 import SwiperJSAllCakes from './SwiperJSAllCakes';
 import s from '@/styles/MenuHome.module.scss';
 
-export default function MenuHome({ cakes }) {
+export default function MenuHome({ menu }) {
   return (
     <section className={s.menuContainer}>
       <MenuTitle />
-      <SwiperJSAllCakes cakes={cakes} />
+      <SwiperJSAllCakes menu={menu} />
       <div className={s.link}>
         <Link href='/menu'>
           <span className='block text-black text-2xl'>more</span>

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import s from '@/styles/Card.module.scss';
 
+
 export default function Card({cake}) {
   return (
     <div className={s.card}>

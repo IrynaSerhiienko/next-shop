@@ -1,6 +1,18 @@
-.card {
-  //   width: 200px;
+.wrapper {
+  display: flex;
   width: 100%;
+  max-width: 1440px;
+  min-height: 100%;
+  padding: 0 15px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 40px;
+  }
+}
+
+.card {
+  width: 100%;
+  //   width: 200px;
   //   display: grid;
 
   border-radius: 5px;

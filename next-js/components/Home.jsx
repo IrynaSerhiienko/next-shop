@@ -3,12 +3,12 @@ import s from '../styles/Home.module.scss';
 import Hero from './Hero';
 import MenuHome from './MenuHome';
 
-export default function Home({ cakes }) {
+export default function Home({ menu }) {
   return (
     <div className={s.content}>
       <Hero />
       {/* <AboutUsHome /> */}
-      <MenuHome cakes={cakes} />
+      <MenuHome menu={menu} />
     </div>
   );
 }

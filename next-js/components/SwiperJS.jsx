@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Autoplay } from 'swiper';
+import Link from 'next/link';
 
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/css';
@@ -41,9 +42,16 @@ export default function SwiperJS({ filteredCakes }) {
             {filteredCakes &&
             filteredCakes.map((cake) => (
               <SwiperSlide key={cake.id} className={s.slide}>
-                <Card cake={cake}/>
+                <Link href={`/menu/${cake.id}`} className={s.link}><Card cake={cake}/></Link>
               </SwiperSlide>
             ))}
+{/* 
+            {filteredCakes &&
+            filteredCakes.map((cake) => (
+              <SwiperSlide key={cake.id} className={s.slide}>
+                <Card cake={cake}/>
+              </SwiperSlide>
+            ))} */}
             
           {/* {cakes &&
             cakes.map((cake) => (

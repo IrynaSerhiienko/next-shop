@@ -1,22 +1,24 @@
 import axios from 'axios';
+import Content from '@/components/Home';
 import Head from 'next/head';
-import s from '@/styles/Home.module.scss';
+
 import Heading from '@/components/Heading';
 import Socials from '@/components/Socials';
-import Content from '@/components/Home';
 import Hero from '@/components/Hero';
 import Menu from './menu';
 import MenuHome from '@/components/MenuHome';
 
+import s from '@/styles/Home.module.scss';
+
 export const getStaticProps = async () => {
   try {
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/cakes/`);
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/menu/`);
     // const response = await axios.get('http://localhost:3000/api/cakes/');
-    const cakes = response.data;
-    console.log(cakes);
+    const menu = response.data;
+    // console.log(cakes);
 
     return {
-      props: { cakes },
+      props: { menu },
     };
   } catch (error) {
     console.error(error);
@@ -26,13 +28,15 @@ export const getStaticProps = async () => {
   }
 };
 
-export default function Home({ socials, cakes }) {
+
+export default function Home({ socials, menu }) {
   return (
     <div className={s.wrapper}>
       <Head>
         <title>Home</title>
       </Head>
-      <Content cakes={cakes} />
+      <Content menu={menu} />
+
       {/* <Socials socials={socials} /> */}
     </div>
   );

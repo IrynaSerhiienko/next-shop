@@ -1,101 +1,165 @@
-// .hero {
-//   display: flex;
-//   margin-bottom: 200px;
-//   //   border: 1px solid red;
-// }
-
-// .scroll {
-//   margin: 0 85px 0 170px;
-//   align-self: flex-end;
-//   padding-bottom: 44px;
-// }
-
-// .img {
-//   padding-top: 52px;
-// }
+.container {
+  position: relative;
+}
 
 .hero {
-  min-height: 650px;
   display: flex;
+  flex-direction: column;
   margin-bottom: 100px;
   position: relative;
   border: 1px solid red;
-}
 
-.containerLeft {
-  display: flex;
-  flex-direction: column;
-  //align-content: space-between;
-
-  .phone {
-    display: flex;
-    margin: 20px 0 0 0;
-    // align-self: start;
-  }
-
-  .scroll {
-    margin-top: auto;
-    display: flex;
-    justify-content: end;
-    justify-self: flex-end;
-    justify-items: end;
-    align-items: flex-end;
-    align-self: flex-end;
-    margin-right: 0px;
-    width: auto;
-    // margin: 0 85px 0 170px;
-    // padding-bottom: 44px;
+  @media screen and (min-width: 1130px) {
+    flex-direction: row-reverse;
   }
 }
 
-.containerRight {
+.part1 {
   display: flex;
   flex-direction: column;
 
-  .logo {
-    position: absolute;
-    top: 25%;
-    left: 0;
+  @media screen and (min-width: 1130px) {
+    width: 75%;
   }
 
   .img {
-    padding: 40px 0 0 20px;
-    margin: 0 0 100px 0;
-    //   justify-content: center;
-    //   display: flex;
-    //   margin: 40px 0 0 95px;
-    //   align-self: flex-end;
+    position: relative;
+    object-fit: contain;
+    align-self: flex-end;
+    width: 245px;
+    height: 240px;
+    margin: 40px 0 100px 0;
+
+    @media screen and (min-width: 375px) {
+      width: 275px;
+      height: 270px;
+    }
+
+    @media screen and (min-width: 425px) {
+      align-self: center;
+      width: 306px;
+      height: 300px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 479px;
+      height: 470px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      align-self: center;
+      margin-left: 160px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (min-width: 1130px) {
+      align-self: flex-start;
+      margin-left: 0;
+      margin-bottom: 0;
+      width: 670px;
+      height: 654px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      margin-left: 80px;
+      width: 670px;
+      height: 654px;
+    }
+  }
+
+  .logo {
+    width: 270px;
+    height: 200px;
+    position: absolute;
+    top: 25%;
+    left: 0;
+
+    @media screen and (min-width: 375px) {
+      top: 28%;
+    }
+
+    @media screen and (min-width: 425px) {
+      width: 358px;
+      height: 265px;
+      top: 25%;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 378px;
+      height: 280px;
+      top: 38%;
+      left: 10%;
+    }
+
+    @media screen and (min-width: 1024px) {
+      top: 29%;
+      left: 17%;
+    }
+
+    @media screen and (min-width: 1130px) {
+      top: 37%;
+      left: 19%;
+    }
+
+    @media screen and (min-width: 1440px) {
+      top: 45%;
+      left: 24%;
+    }
   }
 
   .text {
-    margin: 20px 0 0 26px;
+    position: relative;
+    width: 204px;
+    height: 32px;
+    margin: 0 0 55px 50px;
+
+    @media screen and (min-width: 375px) {
+      margin-left: 70px;
+    }
+
+    @media screen and (min-width: 425px) {
+      margin: 30px 0 55px 85px;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 255px;
+      height: 40px;
+    }
+
+    @media screen and (min-width: 1130px) {
+      position: absolute;
+      bottom: 80px;
+      right: 5px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      position: absolute;
+      bottom: 40px;
+      right: 15px;
+    }
   }
 }
 
-// .hero {
-//   position: relative;
-//   width: 100%;
-//   margin-bottom: 240px;
-// }
+.part2 {
+  @media screen and (min-width: 1130px) {
+    width: 25%;
+    align-self: center;
+    justify-self: center;
+    margin-left: 110px;
+  }
 
-// .containerHero {
-//   position: absolute;
-//   top: 50px;
-//   left: 40%;
-//   z-index: 0;
-//   background-size: contain;
-// }
+  .scroll {
+    position: relative;
+    width: 64px;
+    height: 152px;
 
-// .containerText {
-//   position: absolute;
-//   top: 350px;
-//   left: 17%;
-//   z-index: 1;
-// }
-
-// .containerLogo {
-//   position: absolute;
-//   top: 100px;
-//   left: 0;
-//   z-index: 1;
-// }
+    @media screen and (min-width: 1130px) {
+      margin-top: 230px;
+    }
+  }
+}
