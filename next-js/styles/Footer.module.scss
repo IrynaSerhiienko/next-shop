@@ -1,9 +1,10 @@
 .wrapper {
+  max-width: 1440px;
+  padding: 0 15px;
   display: flex;
   width: 100%;
   min-height: 100%;
-  max-width: 1440px;
-  padding: 0 15px;
+
   justify-content: space-between;
 
   @media screen and (min-width: 768px) {
@@ -11,10 +12,10 @@
   }
 }
 
+
 .footer {
   display: flex;
   align-items: start;
-  //flex-direction: column;
   padding: 28px 0;
 
   @media screen and (min-width: 1130px) {
@@ -23,10 +24,9 @@
 }
 
 .totalContainer1 {
-  //   display: flex;
-  //   flex-direction: column;
   margin-right: 150px;
 }
+
 .totalContainer2 {
   display: flex;
   flex-direction: column;
@@ -43,7 +43,6 @@
 .linksContainer {
   display: flex;
   flex-direction: column;
-  //   justify-items: start;
 
   a {
     display: flex;
@@ -54,67 +53,22 @@
     color: #e9e0e0;
     margin-bottom: 12px;
     transition: all 0.4s ease-in-out;
-    // padding: 0 0 20px 30px;
-    // padding-bottom: 5px;
 
-    // &::before {
-    //   background: transparent;
-    // }
-
-    &.active {
-        color: #cf4f48;
-        text-decoration: none;
-      }
-
-    &.active {
-      //   color: #ebae82;
-      //   border-bottom: #ebae82;
-      //   text-decoration: underline;
+    & .active {
+      //   color: #cf4f48;
+      //   text-decoration: none;
     }
 
     &:hover {
-      //   color: #eb9c82;
-      transform: scale(1.1);
-      //   text-decoration: underline;
+      color: #ebae82;
+      text-decoration: underline;
+      //   transform: scale(1.1);
     }
-
-    // &.active {
-    //   color: #ebae82;
-    //   text-decoration: none;
-    // }
-
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   left: 0;
-    //   bottom: 0;
-    //   width: 0;
-    //   height: 2px;
-    //   background: #ebae82;
-    //   transition: all 0.45s;
-    // }
-
-    // &:hover::before {
-    //   width: 100%;
-    // }
-    // &::before {
-    //   background: transparent;
-    // }
-
-    // &.active {
-    //   color: #ebae82;
-    //   text-decoration: underline;
-    // }
 
     &:last-child {
       margin-bottom: 0;
     }
   }
-
-  //   &:first-child {
-  //     display: flex;
-  //     flex-direction: column;
-  //   }
 }
 
 .shop1 {
@@ -165,7 +119,7 @@
 .icon {
   position: relative;
   width: 35px;
-  height: 30px;
+  height: 100%;
   transition: all 0.5s ease-in-out;
 
   &:hover {
@@ -202,6 +156,10 @@
       font-size: 24px;
       line-height: 24px;
     }
+
+    &:first-child {
+      margin-right: 20px;
+    }
   }
 
   .hour2 {
@@ -209,10 +167,6 @@
       font-size: 24px;
       line-height: 24px;
     }
-  }
-
-  .hour1:first-child {
-    margin-right: 20px;
   }
 }
 

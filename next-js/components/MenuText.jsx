@@ -14,7 +14,7 @@ export default function MenuText() {
             we recommend calculating <b>200 grams per person</b>
           </p>
           <p className={s.menuText}>
-            the minimum order weight is <b>1.5 kg</b>
+            the minimum order weight is <b>1.5kg</b>
           </p>
     </div>
   )

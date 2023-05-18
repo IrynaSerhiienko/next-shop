@@ -3,6 +3,7 @@ export const menu = [
     id: 1,
     name: 'Black and white',
     // name: 'Cake "Black and white"',
+    // image: '/img/menu_all/image0.png',
     image: '/img/menu_all/image1.png',
     shortDescription: 'Black and white sponge cake layered with cream cheese frosting.',
     description:

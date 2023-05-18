@@ -1,16 +1,18 @@
 .wrapper {
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
   max-width: 1440px;
   padding: 0 15px;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+
+  margin: 0 auto;
+  flex-direction: column;
 
   @media screen and (min-width: 768px) {
     padding: 0 40px;
   }
 }
+
 
 .img {
   margin: 0 auto;

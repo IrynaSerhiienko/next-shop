@@ -36,11 +36,3 @@ export default function Menu({ menu }) {
     </>
   );
 }
-
-//   } catch (error) {
-//     console.error(error);
-//     return {
-//       notFound: true,
-//     };
-//   }
-// };

@@ -43,6 +43,7 @@ footer {
 header {
   background-image: linear-gradient(to bottom, rgba(230, 226, 226, 0.5), rgba(233, 223, 223, 1.9));
   background-color: #f49797;
+  border-bottom: 1px solid #cf4f48;
   display: flex;
   align-items: center;
   //   padding: 0 20px;
@@ -64,7 +65,4 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
-  //   max-width: 1240px;
-  //   border: 1px solid red;
-}
+

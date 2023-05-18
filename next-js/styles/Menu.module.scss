@@ -1,19 +1,19 @@
 .wrapper {
+  max-width: 1440px;
+  padding: 0 15px;
+  display: flex;
   width: 100%;
   min-height: 100%;
-  display: flex;
+
   flex-direction: column;
-  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 15px;
-  //   border: 1px solid red;
-  //   @apply
+
   @media screen and (min-width: 768px) {
     padding: 0 40px;
   }
 }
+
 .title {
-  padding-top: 52px;
   margin-bottom: 50px;
 
   @media screen and (min-width: 768px) {
@@ -22,18 +22,24 @@
 }
 
 .container {
-  //   display: none;
+  width: 100%;
 
   @media screen and (min-width: 768px) {
-    display: block;
-    width: 300px;
-    margin-right: 30px;
+    // display: block;
+    // width: 300px;
+    // margin-right: 30px;
+  }
+
+  @media screen and (min-width: 1130px) {
+    // width: 400px;
+    // justify-content: space-around;
+    margin-right: 100px;
   }
 
   @media screen and (min-width: 1440px) {
-    width: 400px;
-    justify-content: space-around;
-    margin-right: 100px;
+    // width: 400px;
+    // justify-content: space-around;
+    margin-right: 190px;
   }
 }
 
@@ -109,8 +115,8 @@
 }
 
 .menuLists {
-  padding-left: 30px;
-  margin-bottom: 20px;
+  margin: 0 0 40px 100px;
+  //   padding-left: 30px;
   width: 90%;
 
   @media screen and (min-width: 768px) {
@@ -120,13 +126,10 @@
 }
 
 .menuList {
-  color: #000;
+  color: #382e2f;
   font-size: 20px;
   cursor: pointer;
-  //   border-bottom: 1px solid #eebfbf;
-  //   margin-bottom: 30px;
-  //   border-bottom: 10px;
-  padding: 10px;
+  //   padding: 10px;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 30px;

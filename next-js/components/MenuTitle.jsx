@@ -20,6 +20,7 @@ export default function MenuTitle() {
           width={227}
           height={24}
           priority={true}
+          
         />
     </div>
   )

@@ -5,8 +5,8 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
-import s from '@/styles/SwiperJSAllCakes.module.scss';
 import Card from './Card';
+import s from '@/styles/SwiperJSAllCakes.module.scss';
 
 export default function SwiperJSAllCakes({ menu }) {
   return (
@@ -20,7 +20,7 @@ export default function SwiperJSAllCakes({ menu }) {
         //     delay: 2500,
         //     disableOnInteraction: false,
         //   }}
-          modules={[FreeMode, Autoplay]}
+        //   modules={[FreeMode, Autoplay]}
           breakpoints={{
             0: {
               slidesPerView: 1.5,
