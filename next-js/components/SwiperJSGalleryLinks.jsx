@@ -40,9 +40,9 @@ export default function SwiperJSGalleryLinks ( {galleryLinks} ) {
           }}
         >
             {galleryLinks  &&
-            galleryLinks.map((link) => (
+            galleryLinks.map((link, index) => (
               <SwiperSlide className={s.slide}>
-                <div key={link} className={s.linkHolder}>{link}</div>
+                <div key={index} className={s.linkHolder}>{link}</div>
               </SwiperSlide>
             ))}
         </Swiper>
