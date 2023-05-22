@@ -1,3 +1,5 @@
+@import './_variables.scss';
+
 .wrapper {
   max-width: 1440px;
   padding: 0 15px;
@@ -24,21 +26,11 @@
 .container {
   width: 100%;
 
-  @media screen and (min-width: 768px) {
-    // display: block;
-    // width: 300px;
-    // margin-right: 30px;
-  }
-
   @media screen and (min-width: 1130px) {
-    // width: 400px;
-    // justify-content: space-around;
     margin-right: 100px;
   }
 
   @media screen and (min-width: 1440px) {
-    // width: 400px;
-    // justify-content: space-around;
     margin-right: 190px;
   }
 }
@@ -47,11 +39,6 @@
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   gap: 2rem;
-  //   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  //   grid-template-rows: repeat(auto-fill, 250px);
-  //   white-space: nowrap;
-  //   overflow-x: scroll;
-  //   grid-template-rows: repeat(1, 1fr);
 
   @media screen and (min-width: 1024px) {
     grid-template-columns: 1fr 1fr;
@@ -63,15 +50,17 @@
 }
 
 .card {
+  ////////////////////Повторяются стили для карточки, написать в одном месте по возможности
   width: 325px;
   display: grid;
   border-radius: 5px;
-  border: 1px solid #c4b2b2;
+  border: 1px solid $secondaryLightGrey;
+  //border: 1px solid #c4b2b2;
   background: linear-gradient(to bottom, rgba(233, 223, 223, 0.7) 0%, rgba(245, 155, 155, 0.5));
   box-shadow: 0px 30px 60px -5px #000;
   margin-bottom: 20px;
   font-size: 20px;
-  color: #000;
+  //color: #000;
 
   &.avalible {
     background: linear-gradient(
@@ -81,6 +70,7 @@
     );
   }
 }
+//////////////////
 
 .img {
   width: 100%;
@@ -91,7 +81,7 @@
     transition: all 0.5s ease-in-out;
   }
 }
-
+////////////////Вроде этого не нужно уже!!!!!!
 .btnAdd {
   position: relative;
   width: 50px;
@@ -107,7 +97,7 @@
     transition: all 0.5s ease-in-out;
   }
 }
-
+//////////////////////////
 .iconHolder {
   position: absolute;
   bottom: 13px;
@@ -116,7 +106,6 @@
 
 .menuLists {
   margin: 0 0 40px 100px;
-  //   padding-left: 30px;
   width: 90%;
 
   @media screen and (min-width: 768px) {
@@ -126,58 +115,37 @@
 }
 
 .menuList {
-  color: #382e2f;
+  color: $mainDarkBrown;
   font-size: 20px;
   cursor: pointer;
-  //   padding: 10px;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 30px;
     font-size: 24px;
   }
 
-  &:hover {
-    // transform: scale(1.05);
-    // transition: all 0.5s ease-in-out;
-    // background-color: #edc3c3;
-    // border-radius: 15px;
-    // box-shadow: 0px 70px 70px -5px #000;
-  }
   &.active {
-    border-bottom: 1px solid #cf4f48;
+    border-bottom: 1px solid $mainRed;
     font-weight: 600;
   }
 }
 
 .menuText {
   width: 100%;
-  color: #000;
+  color: #000; ///////////////мне кажется другой надо
   margin-bottom: 20px;
   font-size: 16px;
   text-align: justify;
   padding-left: 10px;
-  //   width: 300px;
 }
 
 .menuSection {
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
-  //   justify-content: space-between;
   @apply md:flex-row;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 200px;
   }
 }
-
-// .menuAside {
-//   display: flex;
-//   margin-right: 60px;
-//   width: 325px;
-// }
-
-// .available {
-//   background: linear-gradient(to bottom, rgba(245, 155, 155, 0.5), rgba(233, 223, 223, 0.7));
-//   box-shadow: 0px 30px 60px -5px #000;
-// }

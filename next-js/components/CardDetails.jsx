@@ -43,7 +43,7 @@ export default function CardDetails({cake}) {
                 <p  className={s.weight}><strong>chose the weight</strong></p>
                 <SelectWithOptions/>
                 <button className={s.btn}>order</button>
-                {/* <Button text="order" width={171} height={52} color='#EBAE82' /> */}
+                {/* <Button text="order" width={171} height={52} color='$mainOrange' /> */}
             </div>
        </div>
        

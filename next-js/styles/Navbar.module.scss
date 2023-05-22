@@ -1,3 +1,5 @@
+@import './_variables.scss';
+
 .navbar {
   width: 100%;
   height: 75px;
@@ -11,7 +13,7 @@
   top: 0;
   display: flex;
   flex-direction: column;
-  background-color: #e9e0e0;
+  background-color: $mainBase;
   right: 0;
   width: 60%;
   height: 100vh;
@@ -19,9 +21,10 @@
   transform: translateX(100%);
   transition: all 0.45s;
   z-index: 2;
+  //background-color: #e9e0e0;
 
   & > :first-child {
-    border-top: 1px solid #cf4f48;
+    border-top: 1px solid $mainRed;
     padding-top: 20px;
   }
 
@@ -34,18 +37,18 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    color: #6b4845;
-
+    color: $secondaryBrown;
     display: inline-flex;
     align-items: center;
     padding: 0 0 20px 30px;
+    // color: #6b4845;
 
     &::before {
       background: transparent;
     }
 
     &.active {
-      color: #cf4f48;
+      color: $mainRed;
       text-decoration: underline;
     }
   }
@@ -64,15 +67,17 @@
     position: relative;
     width: 32px;
     height: 2px;
-    background-color: #cf726d;
+    background-color: $secondaryLightRed;
     transition: all 0.45s ease-in-out;
+    // background-color: #cf726d;
 
     &::before,
     &::after {
       content: '';
       position: absolute;
       height: 2px;
-      background: #cf726d;
+      background-color: $secondaryLightRed; ////повторяется!
+      //   background: #cf726d;
       border-radius: 2px;
       transition: all 0.45s ease-in-out;
     }
@@ -116,7 +121,6 @@
 }
 
 @media screen and (min-width: 1130px) {
-  // @media screen and (min-width: 1024px) {
   .navbar {
     width: 100%;
     height: 75px;
@@ -126,7 +130,6 @@
 
   .overlay {
     display: none;
-    // background-color: rgba(0, 0, 0, 0);
   }
 
   .navItems {
@@ -150,7 +153,8 @@
       font-weight: 400;
       font-size: 20px;
       line-height: 24px;
-      color: #6b4845;
+      color: $secondaryBrown;
+      //color: #6b4845;
 
       align-items: center;
       margin: 15px;
@@ -160,7 +164,7 @@
       opacity: 0.9;
 
       &.active {
-        color: #cf4f48;
+        color: $mainRed;
         text-decoration: none;
       }
 
@@ -175,8 +179,9 @@
         bottom: 0;
         width: 0;
         height: 2px;
-        background: #cf726d;
+        background-color: $secondaryLightRed;
         transition: all 0.45s;
+        // background-color: #cf726d;
       }
 
       &:hover::before {

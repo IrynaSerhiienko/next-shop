@@ -12,57 +12,42 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
+@import './_extends.scss';
+@import './_mixins.scss';
+@import './_variables.scss';
+@import './_nullstyle.scss';
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #e9e0e0;
-  //   color: #fff;
-  //   font-size: 20px;
+  background-color: $mainBase;
 }
 
 #__next {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   //   display: grid;
   //   grid-auto-rows: auto 1fr auto;
 }
 
 main {
   padding-top: 80px;
-}
-
-header,
-footer {
-  min-height: 66px;
+  flex-grow: 1;
 }
 
 header {
   background-image: linear-gradient(to bottom, rgba(230, 226, 226, 0.5), rgba(233, 223, 223, 1.9));
   background-color: #f49797;
-  border-bottom: 1px solid #cf4f48;
+  border-bottom: 1px solid $mainRed;
   display: flex;
   align-items: center;
-  //   padding: 0 20px;
 }
 
 footer {
   display: flex;
-  background: #cf726d;
+  background-color: $secondaryLightRed;
   border-radius: 240px 240px 0px 0px;
   text-align: center;
   justify-content: center;
   align-items: center;
-  //   font-size: 12px;
-  //   text-transform: uppercase;
-  //   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
 }
-
-a {
-  text-decoration: none;
-}
-
-

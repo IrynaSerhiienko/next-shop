@@ -4,7 +4,7 @@
 //   display: flex;
 //   justify-content: space-between;
 //   align-items: center;
-//   border-bottom: 1px solid #cf4f48;
+//   border-bottom: 1px solid $mainRed;
 // }
 
 // .navItems {
@@ -22,7 +22,7 @@
 //   z-index: 2;
 
 //   & > :first-child {
-//     border-top: 1px solid #cf4f48;
+//     border-top: 1px solid $mainRed;
 //     padding-top: 20px;
 //   }
 
@@ -46,7 +46,7 @@
 //     }
 
 //     &.active {
-//       color: #cf4f48;
+//       color: $mainRed;
 //       text-decoration: underline;
 //     }
 //   }
@@ -162,7 +162,7 @@
 //       opacity: 0.9;
 
 //       &.active {
-//         color: #cf4f48;
+//         color: $mainRed;
 //         text-decoration: none;
 //       }
 

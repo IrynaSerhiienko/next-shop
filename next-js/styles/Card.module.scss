@@ -1,3 +1,5 @@
+@import './_variables.scss';
+
 .wrapper {
   max-width: 1440px;
   padding: 0 15px;
@@ -12,21 +14,20 @@
   }
 }
 
-
-
 .card {
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #c4b2b2;
+  border: 1px solid $secondaryLightGrey;
   background: linear-gradient(to bottom, rgba(233, 223, 223, 0.7) 0%, rgba(245, 155, 155, 0.5));
   font-size: 20px;
-  color: #000;
+  //border: 1px solid #c4b2b2;
+  //color: #000;
 
-  &.avalible {
+  &.notAvalible {
     background: linear-gradient(
       to bottom,
-      rgba(210, 209, 213, 0.9) 0%,
-      rgba(132, 130, 132, 0.9) 100%
+      rgba(235, 234, 236, 0.9) 0%,
+      rgba(205, 202, 205, 0.9) 100%
     );
   }
 
@@ -85,7 +86,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  color: #382e2f;
+  color: $mainDarkBrown;
 
   @media screen and (min-width: 1130px) {
     font-size: 24px;
@@ -98,13 +99,9 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  color: #382e2f;
+  color: $mainDarkBrown;
   margin-bottom: 4px;
 }
-
-// .img {
-//   transform: translate3d(0, 0, 0);
-// }
 
 .btnAdd {
   position: absolute;

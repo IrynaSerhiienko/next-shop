@@ -10,6 +10,7 @@ export default function LinksPart1() {
     { id: 2, title: "about us", path: "/aboutUs" },
     { id: 3, title: "menu", path: "/menu" },
     { id: 4, title: "contacts", path: "/contacts" },
+    
   ];
 
   return (

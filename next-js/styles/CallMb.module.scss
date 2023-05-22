@@ -4,10 +4,8 @@
   height: 80px;
   top: 95px;
   left: 0;
-  z-index: 2;
-
   transform: translate3d(0, 0, 0);
-  color: #cf4f48;
+  //z-index: 2;
 
   &:hover {
     cursor: pointer;

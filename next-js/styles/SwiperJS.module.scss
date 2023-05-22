@@ -1,6 +1,7 @@
 .swiperHolder {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
+
 .swiper {
   //   display: flex;
   //   width: 100%;
@@ -17,8 +18,6 @@
   display: flex;
   align-items: center;
 
-  //   justify-content: center;
-
   @media screen and (min-width: 768px) {
     width: 250px;
   }
@@ -29,5 +28,5 @@
 }
 
 .link {
-    width: 100%;
+  width: 100%;
 }

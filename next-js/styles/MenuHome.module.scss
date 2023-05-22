@@ -1,11 +1,25 @@
+@import './_variables.scss';
+
+.wrapper {
+  max-width: 1440px;
+  padding: 0 0 0 15px;
+  display: flex;
+  width: 100%;
+
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 40px;
+  }
+}
+
 .menuContainer {
   display: flex;
   width: 100%;
   margin-bottom: 100px;
 
   @apply flex flex-col;
-  //border: 1px red solid;
-  //background-color: rgb(0, 255, 76);
 
   @media screen and (min-width: 768px) {
     margin-bottom: 207px;
@@ -21,7 +35,6 @@
   @media screen and (min-width: 1024px) {
     width: 75%;
   }
-  //   @apply max-lg:w-3/4;
 }
 
 .slide {
@@ -39,11 +52,9 @@
     width: 325px;
   }
 }
-
+////////////////////////Повторяется!!!!!!!!!!!!!!!!!!!
 .card {
-  //   width: 200px;
   width: 100%;
-  //   display: grid;
 
   border-radius: 5px;
   border: 1px solid #c4b2b2;
@@ -51,7 +62,6 @@
   box-shadow: 0px 30px 60px -5px #000;
   font-size: 20px;
   color: #000;
-  //   margin-bottom: 20px;
 
   &.avalible {
     background: linear-gradient(
@@ -66,6 +76,7 @@
     // grid-template-columns: 1fr 1fr;
   }
 }
+///////////////////////////////////////////////
 
 .img {
   display: block;
@@ -73,8 +84,6 @@
   height: 100%;
   object-fit: cover;
   transform: scale(1.11);
-
-  //   width: 200px;
 
   @media screen and (min-width: 768px) {
     width: 250px;
@@ -92,6 +101,7 @@
 }
 
 .btnAdd {
+  ////////////////повторяется во многих местах!!!!!!!
   position: relative;
   width: 50px;
   height: 50px;
@@ -106,6 +116,8 @@
     transition: all 0.5s ease-in-out;
   }
 }
+
+////////////////////
 
 .iconHolder {
   position: absolute;
@@ -130,9 +142,9 @@
   .text {
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 26px;
     line-height: 28px;
-    color: #382e2f;
+    color: $mainDarkBrown;
 
     @media screen and (min-width: 1440px) {
       font-weight: 500;
@@ -145,54 +157,11 @@
 .imgContainer {
   position: relative;
   width: 173px;
-  //   width: 100%;
-  height: 15px;
+  height: 10px;
 
   @media screen and (min-width: 1440px) {
     width: 324px;
   }
 
   @apply flex flex-col;
-  //   @apply flex flex-col w-1/4;
 }
-
-// // .cardsContainer {
-// //   @media screen and (min-width: 1440px) {
-// //     padding-right: 80px;
-// //   }
-// // }
-
-// // .cards {
-// //   display: grid;
-// //   grid-template-rows: repeat(1, 1fr);
-// //   gap: 2rem;
-
-// //   @media screen and (min-width: 1024px) {
-// //     grid-template-columns: 1fr 1fr;
-// //   }
-// // }
-
-// .container {
-//   padding: 10px 10px;
-//   justify-content: center;
-//   background-color: darkblue;
-// }
-
-// .card {
-//   width: 100%;
-//   padding: 10px 10px;
-//   justify-content: center;
-//   background-color: rgb(192, 233, 54);
-// }
-
-// .swiperHolder {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-
-//     background-color: red;
-//     border: 1px solid blue;
-
-//     width: 100%;
-//     max-width: 100%;
-//   }

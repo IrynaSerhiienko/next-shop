@@ -1,0 +1,157 @@
+@import './_variables.scss';
+
+.wrapper {
+  max-width: 1440px;
+  padding: 0 0 0 15px;
+  display: flex;
+  width: 100%;
+
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 0 0 40px;
+  }
+}
+
+.galleryContainer {
+  margin-bottom: 108px;
+
+  @media screen and (min-width: 1130px) {
+    margin-bottom: 207px;
+  }
+}
+
+.swiperLinksContainer {
+  margin-bottom: 51px;
+
+  @media screen and (min-width: 1130px) {
+    margin-bottom: 0;
+  }
+}
+
+.swiperGalleryContainer {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 1130px) {
+    margin-bottom: 0;
+  }
+}
+
+.linksScrollHolder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  @media screen and (min-width: 1130px) {
+    align-self: flex-end;
+    padding-right: 40px;
+  }
+
+  .text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 28px;
+    color: $mainDarkBrown;
+
+    @media screen and (min-width: 1440px) {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  .imgContainer {
+    position: relative;
+    width: 173px;
+    height: 10px;
+
+    @media screen and (min-width: 1440px) {
+      width: 324px;
+    }
+    // @apply flex flex-col;
+  }
+}
+
+.scroll {
+  display: none;
+
+  @media screen and (min-width: 1130px) {
+    display: block;
+    padding-left: 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-left: 172px;
+  }
+
+  .text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 28px;
+    color: $mainDarkBrown;
+
+    @media screen and (min-width: 1130px) {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  .imgContainer {
+    position: relative;
+
+    @media screen and (min-width: 1130px) {
+      width: 325px;
+      height: 2px;
+      margin-top: 4px;
+    }
+    // @apply flex flex-col;
+  }
+}
+
+.asideContainer {
+  @media screen and (min-width: 1130px) {
+    width: 300px;
+    height: 320px;
+    margin: 0 20px 0 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 325px;
+    height: 348px;
+    margin-left: 172px;
+  }
+}
+
+.galleryList {
+  color: $mainDarkBrown;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 44px;
+
+  &.active {
+    font-weight: 600;
+    border-bottom: 1px solid $mainRed;
+  }
+}
+
+.galleryText {
+  //   width: 100%;
+  //   color: $mainDarkBrown;
+  //   margin-bottom: 20px;
+  //   font-size: 16px;
+  //   text-align: justify;
+  //   padding-left: 10px;
+}
+
+.totalContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 77px;
+}

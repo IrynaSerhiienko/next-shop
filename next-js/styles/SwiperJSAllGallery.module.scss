@@ -1,0 +1,42 @@
+.swiperHolder {
+  @media screen and (min-width: 1130px) {
+    width: 720px;
+    // width: 620px;
+    // width: 1015px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 895px;
+    // width: 770px;
+    margin-right: 20px;
+  }
+}
+
+.slide {
+  width: 250px;
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    width: 250px;
+  }
+
+  @media screen and (min-width: 1130px) {
+    width: 325px;
+  }
+}
+
+.cakeHolder {
+  position: relative;
+  width: 200px;
+  height: 200px;
+
+  @media screen and (min-width: 1130px) {
+    width: 400px;
+    height: 400px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 500px;
+    height: 500px;
+  }
+}

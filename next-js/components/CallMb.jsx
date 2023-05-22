@@ -10,9 +10,6 @@ export default function CallMb() {
             alt='callIcon'
             src='/img/main_hero/callMb.svg'
             fill
-            // width={75}
-            // height={70}
-             // priority={true}
           />
         </div>
     </Link>

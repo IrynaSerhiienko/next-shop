@@ -11,6 +11,7 @@ export default function Card({cake}) {
                 className={s.img}
                 src={cake.image}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 // width={266}
                 // height={404}
                 priority={true}

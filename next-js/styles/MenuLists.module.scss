@@ -1,3 +1,5 @@
+@import './_variables.scss';
+
 .menuLists {
   margin: 0 0 40px 60px;
 
@@ -7,14 +9,11 @@
 
   @media screen and (min-width: 768px) {
     margin-left: 250px;
-    // padding-left: 0;
-    // margin-bottom: 60px;
   }
 
   @media screen and (min-width: 1130px) {
     margin-left: 0;
     margin-bottom: 60px;
-    // padding-left: 0;
   }
 }
 
@@ -25,19 +24,13 @@
   line-height: 20px;
   display: table;
   align-items: center;
-  color: #382e2f;
+  color: $mainDarkBrown;
   padding: 10px 10px 10px 0;
   cursor: pointer;
 
   &.active {
     font-weight: 600;
-    border-bottom: 1px solid #cf4f48;
-  }
-
-  @media screen and (min-width: 768px) {
-    // font-size: 24px;
-    // line-height: 24px;
-    // margin-bottom: 30px;
+    border-bottom: 1px solid $mainRed;
   }
 
   @media screen and (min-width: 1130px) {
