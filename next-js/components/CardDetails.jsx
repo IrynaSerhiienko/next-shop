@@ -36,15 +36,16 @@ export default function CardDetails({cake}) {
                     priority={true}
                     loading='eager'
                 />
-            </div>
-            <div className={s.descriptionContainer}>
+        </div>
+        <div className={s.descriptionContainer}>
                 <p className={s.description}>{cake.description}</p>
                 <p className={s.price}><strong>{cake.price} UAH per 1 kg</strong></p>
                 <p  className={s.weight}><strong>chose the weight</strong></p>
                 <SelectWithOptions/>
-                <button className={s.btn}>order</button>
+                <Button text="order"/>
                 {/* <Button text="order" width={171} height={52} color='$mainOrange' /> */}
-            </div>
+                {/* <button className={s.btn}>order</button> */}
+        </div>
        </div>
        
        

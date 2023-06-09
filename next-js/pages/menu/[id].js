@@ -57,7 +57,7 @@ export default function Details({ cake }) {
   return (
     <>
       <Head>
-        <title>Cake details!!!!!!!!!!!</title>
+        <title>Cake details</title>
       </Head>
       <div className={s.wrapper}>
         <CardDetails cake={cake} />

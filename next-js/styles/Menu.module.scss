@@ -2,7 +2,7 @@
 
 .wrapper {
   max-width: 1440px;
-  padding: 0 15px;
+  //   padding: 0 15px;
   display: flex;
   width: 100%;
   min-height: 100%;
@@ -11,7 +11,7 @@
   margin: 0 auto;
 
   @media screen and (min-width: 768px) {
-    padding: 0 40px;
+    // padding: 0 40px;
   }
 }
 
@@ -147,5 +147,9 @@
 
   @media screen and (min-width: 768px) {
     margin-bottom: 200px;
+  }
+
+  @media screen and (min-width: 1130px) {
+    padding: 0 40px;
   }
 }

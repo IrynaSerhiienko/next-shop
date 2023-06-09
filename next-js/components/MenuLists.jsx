@@ -3,7 +3,7 @@ import s from '@/styles/MenuLists.module.scss';
 export default function MenuLists({selectedCategory, setSelectedCategory}) {
 
   return (
-    <>
+    <div className={s.wrapper}>
         <ul className={s.menuLists}>
             <li
                 className={`${s.menuList} ${selectedCategory === 'all' ? s.active : ''}`}
@@ -30,7 +30,7 @@ export default function MenuLists({selectedCategory, setSelectedCategory}) {
                 onClick={() => setSelectedCategory('wedding')}>wedding selection
             </li>
         </ul>
-    </>
+    </div>
   )
 }
 
