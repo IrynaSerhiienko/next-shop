@@ -21,11 +21,11 @@ export default function SelectWithOptions() {
 
     return (
         <select className={s.selectContainer} value={selectedOption} onChange={handleSelectChange}>
-        {options.map((option) => (
-            <option key={option} value={option}>
-            {option}
-            </option>
-        ))}
+            {options.map((option) => (
+                <option key={option} value={option}>
+                {option}
+                </option>
+            ))}
         </select>
     );
 }

@@ -9,6 +9,7 @@ export default function LinksPart2() {
     { id: 5, title: "gallery", path: "/gallery" },
     { id: 6, title: "payment & delivery", path: "/paymentDelivery" },
     { id: 7, title: "reviews", path: "/reviews" },
+    { id: 8, title: "test", path: "/test" },
     // { id: 8, title: 'Posts', path: '/posts' },
   ];
 

@@ -1,57 +1,52 @@
+import Head from "next/head";
+import { useRouter } from "next/router";
 import Image from "next/image"
-import Link from "next/link";
+import ButtonArrowBack from "./ButtonArrowBack";
 import SelectWithOptions from "./SelectWithOptions";
 import Button from "./Button";
-
 import s from '@/styles/CardDetails.module.scss';
-// import s from '@/styles/Card.module.scss';
 
 
 export default function CardDetails({cake}) {
+    
+    const router = useRouter()
+    
+    const handlePlaceOrderStep1 = (e) => {
+        router.push(`/menu/${cake.id}/placeOrderStep1`)
+    }
+
   return (
     <div className={s.totalContainer}>
+        <Head>
+            <title>CardDetails</title>
+        </Head>
     {/* <div className={s.wrapper}> */}
         <h3 className={s.title}>{cake.name}</h3>
-        <Link href={'/menu'} >
-            <div className={s.arrowContainer}>
-                <span className={s.arrowText}>back to menu</span>
-                <div className={s.arrow}>
+        <ButtonArrowBack text={'back to menu'} onClick={() => router.back()}/>
+        <div className={s.imgDescriptionContainer}>
+            <div className={s.imgContainer}>
                     <Image
-                        alt='arrow'
-                        src='/img/card_details/arrow.svg'
+                        className={s.img}
+                        alt={cake.name || 'Cake image'}
+                        src={cake.image}
                         fill
                         priority={true}
                         loading='eager'
                     />
-                </div>
             </div>
-        </Link>
-       <div className={s.imgDescriptionContainer}>
-        <div className={s.imgContainer}>
-                <Image
-                    className={s.img}
-                    alt={cake.name || 'Cake image'}
-                    src={cake.image}
-                    fill
-                    priority={true}
-                    loading='eager'
-                />
-        </div>
         <div className={s.descriptionContainer}>
                 <p className={s.description}>{cake.description}</p>
                 <p className={s.price}><strong>{cake.price} UAH per 1 kg</strong></p>
                 <p  className={s.weight}><strong>chose the weight</strong></p>
                 <SelectWithOptions/>
-                <Button text="order"/>
-                {/* <Button text="order" width={171} height={52} color='$mainOrange' /> */}
-                {/* <button className={s.btn}>order</button> */}
+                <Button text={'order'} onClick={handlePlaceOrderStep1}/>
         </div>
        </div>
-       
-       
     </div>
  )
 }
- 
+
+{/* <Button text="order" width={171} height={52} color='$mainOrange' /> */}
+{/* <button className={s.btn}>order</button> */}
 
 

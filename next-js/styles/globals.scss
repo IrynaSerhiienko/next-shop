@@ -8,14 +8,14 @@
 //   font-display: swap;
 // }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import './_extends.scss';
 @import './_mixins.scss';
 @import './_variables.scss';
 @import './_nullstyle.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   font-family: 'Open Sans', sans-serif;

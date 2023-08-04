@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Head from 'next/head';
-import CardDetails from '@/components/CardDetails';
+import CardDetails from '../../../components/CardDetails';
 
 import s from '@/styles/Card.module.scss';
 
@@ -15,7 +15,7 @@ export const getStaticPaths = async () => {
       };
     });
 
-    console.log('return paths>>>', paths);
+    // console.log('return paths>>>', paths);
 
     return {
       paths,
@@ -65,35 +65,3 @@ export default function Details({ cake }) {
     </>
   );
 }
-
-// export const getStaticPaths = async () => {
-//   const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/menu/`);
-//   const data = await response.json();
-
-//   const paths = data.map((cake) => {
-//     return {
-//       //params: { id: cake.id },
-//       params: { id: cake.id.toString() },
-//     };
-//   });
-
-//   //console.log('paths>>>', paths);
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
-
-// export const getStaticProps = async (context) => {
-//   //   console.log('context.params >>>', context.params);
-//   //   console.log('context.params.id >>>', context.params.id);
-//   let id = context.params.id;
-//   const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_ENV}/menu?id=${id}`);
-//   const data = await response.json();
-//   const cake = data.find((cake) => cake.id.toString() === id);
-
-//   return {
-//     props: { cake },
-//     // props: { cake: data },
-//   };
-// };

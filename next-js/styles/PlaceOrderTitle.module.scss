@@ -1,0 +1,38 @@
+@import './_mixins.scss';
+
+.totalTitleHolder {
+  @apply flex gap-2 items-end;
+  margin: 40px 0 40px 20%;
+
+  @media screen and (min-width: 768px) {
+    @apply gap-5;
+    margin-left: 40%;
+  }
+
+  @media screen and (min-width: 1130px) {
+    margin-top: 52px;
+  }
+}
+
+.titleContainer {
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  @include size(123px, 96px);
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    @include size(171px, 136px);
+  }
+}
+
+.subTitleContainer {
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  width: 92px;
+  height: 32px;
+
+  @media screen and (min-width: 768px) {
+    width: 115px;
+    height: 40px;
+  }
+}

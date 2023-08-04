@@ -1,0 +1,135 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+
+// .formDecorContainer {
+//   width: 100%;
+//   @media screen and (min-width: 390px) {
+//     @include size(352px, auto);
+//   }
+// }
+
+.title {
+  width: 100%;
+  @include font-setting('Open Sans', normal, 600, 22px, 24px, 0.01em, $secondaryBrown);
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 40px 0;
+}
+
+// .option {
+//   @include font-setting('Open Sans', normal, 400, 14px, 22px, 0.01em, $secondaryBrown);
+//   width: 150px;
+//   margin-right: 12px;
+//   @media screen and (min-width: 390px) {
+//     margin-right: 16px;
+//     width: 205px;
+//   }
+// }
+
+// .price {
+//   @include font-setting('Open Sans', normal, 400, 17px, 24px, 0.001em, $secondaryBrown);
+//   @media screen and (min-width: 390px) {
+//     font-size: 18px;
+//   }
+// }
+
+// .radioWrapper {
+//   display: block;
+//   position: relative;
+//   cursor: pointer;
+
+//   &:hover {
+//     .checkmark,
+//     .checkmarkForCheckbox {
+//       // .input ~ .checkmark {
+//       border: 2px solid $secondaryBrown;
+//     }
+//   }
+
+//   .input:checked {
+//     ~ .checkmark::after {
+//       display: block;
+//     }
+//     ~ .checkmarkForCheckbox::before,
+//     ~ .checkmarkForCheckbox::after {
+//       display: block;
+//       border: 1px;
+//     }
+//   }
+
+//   .checkmark::after {
+//     content: '';
+//     position: absolute;
+//     display: none;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 16px;
+//     height: 16px;
+//     border-radius: 50%;
+//     background-color: $mainRed;
+//   }
+
+//   .checkmarkForCheckbox::before,
+//   .checkmarkForCheckbox::after {
+//     content: '';
+//     position: absolute;
+//     display: none;
+//   }
+
+//   .checkmarkForCheckbox::before {
+//     @include size(14px, 2px);
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) rotate(45deg);
+//     border-radius: 2px;
+//     background-color: $secondaryLightRed;
+//   }
+
+//   .checkmarkForCheckbox::after {
+//     @include size(14px, 2px);
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) rotate(-45deg);
+//     border-radius: 2px;
+//     background-color: $secondaryLightRed;
+//   }
+// }
+
+// .input {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 100;
+//   opacity: 0;
+//   cursor: pointer;
+// }
+
+// .checkmark {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   @include size(24px, 24px);
+//   background-color: transparent;
+//   border: 1px solid $secondaryBrown;
+//   border-radius: 50%;
+// }
+
+// .checkmarkForCheckbox {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   @include size(24px, 24px);
+//   background-color: transparent;
+//   border: 1px solid $secondaryBrown;
+// }
+
+// .addCandles {
+//   width: 308px;
+//   @include font-setting('Open Sans', normal, 400, 16px, 22px, 0.001em, $secondaryBrown);
+// }

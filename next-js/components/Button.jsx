@@ -1,11 +1,33 @@
+import classNames from 'classnames';
 import s from '../styles/Button.module.scss';
 
-export default function Button({text}) {
+export default function Button({text, onClick, className}) {
+    const buttonClasses = classNames(s.btn, className);
 
-  return (
-      <button className={s.btn}>{text}</button>
-  )
+    return (
+        <button className={buttonClasses} onClick={onClick}>{text}</button>
+    )
+   
 }
+
+// if(link) {
+//     return (
+//         <Link href={link}>
+//             <button className={buttonClasses}>{text}</button>
+//         </Link>
+//     )
+// } else {
+//     return (
+//         <button className={buttonClasses} onClick={onClick}>{text}</button>
+//     )
+// }
+
+
+// const buttonStyles = {
+    //     ...s.btn, // Стили кнопки по умолчанию из SCSS-модуля
+    //     ...className, // Дополнительные стили переданные через пропсы
+    //   };
+    // const combinedClassName = `${s.btn} ${className}`.trim();
 
 // export default function Button({text, width, height, color}) {
 //     const buttonStyles = {
@@ -13,8 +35,3 @@ export default function Button({text}) {
 //         height: `${height}px`,
 //         backgroundColor: color
 //       };
-
-//   return (
-//       <button className={s.btn} style={buttonStyles}>{text}</button>
-//   )
-// }

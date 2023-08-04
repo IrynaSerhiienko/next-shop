@@ -9,11 +9,11 @@ import s from '../styles/404.module.scss';
 export default function Error() {
   const router = useRouter();
 
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       router.push('/');
-  //     }, 3000);
-  //   }, [router]);
+    useEffect(() => {
+      setTimeout(() => {
+        router.push('/');
+      }, 3000);
+    }, [router]);
 
   return (
     <div className={s.wrapper}>
