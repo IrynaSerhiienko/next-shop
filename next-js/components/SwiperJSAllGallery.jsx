@@ -15,12 +15,12 @@ export default function SwiperJSAllGallery({ gallery }) {
           className={s.swiper}
           freeMode={true}
           grabCursor={true}
-        //   loop={true}
-        //   autoplay={{
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        //   }}
-        //   modules={[FreeMode, Autoplay]}
+          loop={true}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+          }}
+          modules={[FreeMode, Autoplay]}
           breakpoints={{
             0: {
               slidesPerView: 1.5,

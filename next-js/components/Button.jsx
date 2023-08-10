@@ -1,11 +1,11 @@
 import classNames from 'classnames';
 import s from '../styles/Button.module.scss';
 
-export default function Button({text, onClick, className}) {
+export default function Button({text, onClick, className, type, isValid}) {
     const buttonClasses = classNames(s.btn, className);
 
     return (
-        <button className={buttonClasses} onClick={onClick}>{text}</button>
+        <button type={type} isValid={isValid} className={buttonClasses} onClick={onClick}>{text}</button>
     )
    
 }

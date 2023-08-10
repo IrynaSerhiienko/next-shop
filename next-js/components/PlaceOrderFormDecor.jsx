@@ -1,23 +1,53 @@
 import { useForm, ValidationError } from '@formspree/react';
-import { useState } from 'react';
+// import {useForm} from 'react-hook-form'
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import Button from './Button';
 import s from '../styles/PlaceOrderFormDecor.module.scss';
-// import Button from './Button';
 
 export default function PlaceOrderFormDecor() {
+
+    const router = useRouter()
+    const { id } = router.query;
+
+    const handlePlaceOrderStep2 = () => {
+        router.push(`/menu/${id}/placeOrderStep2`);
+    };
 
     const [radioValue, setRadioValue] = useState('');
     const [checkboxValue, setCheckboxValue] = useState(false);
     const [isRadioSelected, setIsRadioSelected] = useState(false);
+
     const [state, handleSubmit] = useForm("maykjyzj");
   
     const handleRadioChange = (event) => {
       setRadioValue(event.target.value);
+    //   localStorage.setItem('radioValue', event.target.value)
+      localStorage.setItem('radioValue', JSON.stringify(event.target.value))
       setIsRadioSelected(true);
     };
   
     const handleCheckboxChange = (event) => {
-      setCheckboxValue(event.target.checked);
+        setCheckboxValue(event.target.checked);
+        // localStorage.setItem('checkboxValue', event.target.checked)
+        localStorage.setItem('checkboxValue', JSON.stringify(event.target.checked))
+
+        if (!event.target.checked) {
+            localStorage.removeItem('checkboxValue');
+        }
     };
+
+    useEffect(() => {
+        const savedRadioValue = localStorage.getItem('radioValue')
+        if(savedRadioValue){
+            setRadioValue(savedRadioValue)
+        }
+
+        const savedCheckboxValue = JSON.parse(localStorage.getItem('checkboxValue'));
+        if (savedCheckboxValue) {
+            setCheckboxValue(savedCheckboxValue);
+        }
+    }, [])
   
     const isNextStepDisabled = !isRadioSelected;
   
@@ -29,7 +59,8 @@ export default function PlaceOrderFormDecor() {
         <div className={s.formDecorContainer}>
             <p className={s.title}>please select the type of decor and the need for candles</p>
             <p className={s.subTitle}>* prices for decor are approximate. the final price will be determined after we contact you</p>
-            <form onSubmit={handleSubmit} className={s.form}>
+            <form className={s.form}>
+            {/* <form onSubmit={handleSubmit} className={s.form}> */}
                 <div className={`${s.radioWrapper} flex mb-4`}>
                         <input
                         type="radio"
@@ -88,16 +119,9 @@ export default function PlaceOrderFormDecor() {
                     <span className={s.checkmarkForCheckbox}></span>
                     <p className={`${s.addCandles} pl-8`}>if you need <b className={`text-xl font-medium`}>candles</b>, please click here, it’s free</p>
                 </div>
-               {/* <Button/> */}
-                <div>
-                    
-                    <button type="submit" disabled={isNextStepDisabled || state.submitting}>
-                        Next Step
-                    </button>
-                </div>
+               <Button type={'button'} text={'next step'} onClick={handlePlaceOrderStep2} className={`${s.btnAdd} mx-auto mt-10`}/>
             </form>
         </div>
-     
     );
   }
 

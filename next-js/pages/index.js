@@ -1,9 +1,6 @@
 import axios from 'axios';
 import Content from '@/components/Home';
 import Head from 'next/head';
-
-// import Heading from '@/components/Heading';
-
 import s from '@/styles/Home.module.scss';
 
 export const getStaticProps = async () => {
