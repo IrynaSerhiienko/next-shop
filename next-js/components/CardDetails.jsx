@@ -12,7 +12,11 @@ export default function CardDetails({cake}) {
     const router = useRouter()
     
     const handlePlaceOrderStep1 = (e) => {
-        router.push(`/menu/${cake.id}/placeOrderStep1`)
+        // router.push(`/menu/${cake.id}/placeOrderStep1`)
+        router.push({
+            pathname: `/menu/${cake.id}/placeOrderStep1`,
+            query: {image: cake.image}  
+        })
     }
 
   return (
@@ -29,6 +33,7 @@ export default function CardDetails({cake}) {
                         className={s.img}
                         alt={cake.name || 'Cake image'}
                         src={cake.image}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         fill
                         priority={true}
                         loading='eager'

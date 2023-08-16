@@ -1,6 +1,4 @@
 import { useState, useMemo, useEffect } from 'react';
-import Link from 'next/link';
-
 import MenuLists from './MenuLists';
 import SwiperJS from './SwiperJS';
 import MenuText from './MenuText';
@@ -24,7 +22,7 @@ export default function MenuContent({ menu }) {
       };
     }, []);
 
-    const filteredCakes = useMemo(() => {
+    const filteredCakes = useMemo (() => {
         if (selectedCategory === 'all') {
           return menu;
         } else {
@@ -57,13 +55,13 @@ export default function MenuContent({ menu }) {
   
         <div className={s.cards}>
           {filteredCakes &&
-            filteredCakes.map((cake) => (<Link href={`/menu/${cake.id}`} key={cake.id}><Card cake={cake}/></Link>))}
-            {/* filteredCakes.map((cake) => (<Card cake={cake} key={cake.id} />))} */}
+           filteredCakes.map((cake) => (<Card cake={cake} key={cake.id}/>))}
         </div>
       </>
     )
-  ) : null; 
+    ) : null; 
 }
 
+// filteredCakes.map((cake) => (<Link href={`/menu/${cake.id}`} key={cake.id}><Card cake={cake}/></Link>))}
 
 
