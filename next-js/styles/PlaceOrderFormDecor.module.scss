@@ -3,6 +3,7 @@
 
 .formDecorContainer {
   width: 100%;
+  margin: 0 auto;
   @media screen and (min-width: 390px) {
     @include size(352px, auto);
   }
@@ -11,7 +12,7 @@
 .title {
   width: 100%;
   @include font-setting('Open Sans', normal, 600, 22px, 24px, 0.01em, $secondaryBrown);
-//   margin-top: 40px;
+  //   margin-top: 40px;
   margin-bottom: 32px;
 }
 

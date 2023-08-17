@@ -6,11 +6,11 @@ import Button from './Button';
 import s from '../styles/PlaceOrderFormDateTime.module.scss';
 
 export default function PlaceOrderFormDateTime() {
-    const {register, handleSubmit, formState: {errors, isValid, isSubmitting}} = useForm({mode: 'onBlur'})
+    const {register, handleSubmit, reset, formState: {errors, isValid, isSubmitting}} = useForm({mode: 'onBlur'})
     const {formData, setValues} = useData()
-
+    
+    const [buttonStyle, setButtonStyle] = useState(s.invalidButton); 
     const [showErrorMessage, setShowErrorMessage] = useState(false);
-    // const [buttonClass, setButtonClass] = useState(s.invalidButton)
     const [isDateFilled, setIsDateFilled] = useState(false);
     const [isTimeFilled, setIsTimeFilled] = useState(false);
     const [isWishesFilled, setIsWishesFilled] = useState(false);
@@ -30,21 +30,24 @@ export default function PlaceOrderFormDateTime() {
         setIsWishesFilled(Boolean(formData.wishes))
     }, [formData.wishes]);
 
-    // useEffect(() => {
-    //     if (isDateFilled && isTimeFilled && isWishesFilled && isValid) {
-    //         setButtonClass(s.validButton)
-    //     } else {
-    //         setButtonClass(s.invalidButton)
-    //     }
-    // }, [isDateFilled, isTimeFilled, isWishesFilled, isValid]);
+    useEffect(() => {
+        if (isDateFilled && isTimeFilled && isWishesFilled) {
+            setShowErrorMessage(false)
+            setButtonStyle(s.validButton)
+        } else {
+            setButtonStyle(s.invalidButton)
+        }
+    }, [isDateFilled, isTimeFilled, isWishesFilled])
 
     const onSubmit = (data) => {
         console.log(data)
         setValues({ date: '', time: '', wishes: '' }); 
+        reset();
     };
 
     const handlePlaceOrderStep3 = () => {
         if (isValid) {
+            setShowErrorMessage(false)
             router.push(`/menu/${id}/placeOrderStep3`);
         } else {
             setShowErrorMessage(true)
@@ -55,15 +58,15 @@ export default function PlaceOrderFormDateTime() {
         const newFieldValue = value
         localStorage.setItem(field, newFieldValue)
         setValues({[field]: newFieldValue})
-        setShowErrorMessage(false)
+        // setShowErrorMessage(false)
     }
     
     return (
-        <div className={s.formDecorContainer}>
+        <div className={s.formDateTimeContainer}>
             <p className={s.title}>please choose the desired date and time when you need the cake</p>
             <form noValidate autoComplete='off' onSubmit={handleSubmit(onSubmit)} className={s.form}>
                 <div className={`${s.inputWrapper}`}>
-                    <label htmlFor='date' className={`${s.label}`}>enter the desired date</label>
+                    <label htmlFor='date' className={`${s.label}`}>enter the desired date <span style={{color: '#cf4f48'}}>*</span></label>
                     <input
                         className={s.input}
                         {...register('date', {required: true})}
@@ -75,7 +78,7 @@ export default function PlaceOrderFormDateTime() {
                     {errors.date?.type === 'required' && !isDateFilled && (<p role='alert' className={`${s.error}`}>Date is required!</p>)}
                 </div>
                 <div className={`${s.inputWrapper}`}>
-                    <label htmlFor='time' className={`${s.label}`}>enter the desired time</label>
+                    <label htmlFor='time' className={`${s.label}`}>enter the desired time <span style={{color: '#cf4f48'}}>*</span></label>
                     <input
                         className={s.input}
                         {...register('time', {required: true})}
@@ -87,7 +90,7 @@ export default function PlaceOrderFormDateTime() {
                      {errors.time?.type === 'required' && !isTimeFilled && (<p role='alert' className={`${s.error}`}>Time is required!</p>)}
                 </div>
                 <div className={`${s.inputWrapper}`}>
-                    <label htmlFor='wishes' className={`${s.label}`}>write your wishes regarding decoration or fillings</label>
+                    <label htmlFor='wishes' className={`${s.label}`}>write your wishes regarding decoration or fillings <span style={{color: '#cf4f48'}}>*</span></label>
                     <input
                         className={s.input}
                         {...register('wishes', {required: true, maxLength: 150})}
@@ -100,15 +103,14 @@ export default function PlaceOrderFormDateTime() {
                     />
                      {errors.wishes?.type === 'required' && !isWishesFilled && (<p role='alert' className={`${s.error}`}>Wishes are required!</p>)}
                     {errors.wishes?.type === 'maxLength' && (<p role='alert' className={`${s.error}`}>Maximum length must be 150 symbols!</p>)}
-                </div>
-                <Button disabled={!isValid || isSubmitting} text={'next step'} onClick={handlePlaceOrderStep3} className={`${s.btnAdd} mx-auto mt-10 ${isValid ? s.validButton : s.invalidButton}`} />
-                {/* <Button disabled={!isValid || isSubmitting} text={'next step'} onClick={handlePlaceOrderStep3} className={`${s.btnAdd} mx-auto mt-10 ${buttonClass}`} /> */}
-               
+                </div> 
                 {showErrorMessage && (
                      <p role="alert" className={`${s.error}`}>
-                     Please fill out all the required fields before proceeding.
+                     Please fill out all the required fields before proceeding!
                  </p>
                 )}
+                <Button disabled={!isValid || isSubmitting} text={'next step'} onClick={handlePlaceOrderStep3} className={`${s.btnAdd} mx-auto mt-10 ${buttonStyle}`} />
+                {/* <Button disabled={!isValid || isSubmitting} text={'next step'} onClick={handlePlaceOrderStep3} className={`${s.btnAdd} mx-auto mt-10 ${isValid ? s.validButton : s.invalidButton}`} /> */}
             </form>
         </div>
     );

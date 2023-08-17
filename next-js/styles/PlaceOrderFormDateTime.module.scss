@@ -1,12 +1,9 @@
 @import './_mixins.scss';
 @import './_variables.scss';
 
-// .formDecorContainer {
-//   width: 100%;
-//   @media screen and (min-width: 390px) {
-//     @include size(352px, auto);
-//   }
-// }
+.formDateTimeContainer {
+    margin: 0 auto;
+}
 
 .validButton {
   opacity: 100%;
@@ -25,6 +22,14 @@
   @include font-setting('Open Sans', normal, 600, 22px, 24px, 0.01em, $secondaryBrown);
   margin-top: 40px;
   margin-bottom: 32px;
+
+  @media screen and (min-width: 390px) {
+    @include size(358px, auto);
+  }
+
+  @media screen and (min-width: 1130px) {
+    @include size(477px, auto);
+  }
 }
 
 .form {
@@ -34,8 +39,11 @@
 }
 
 .inputWrapper {
-  @include size(358px, auto);
-  margin-bottom: 20px;
+  width: 100%;
+  @media screen and (min-width: 390px) {
+    @include size(358px, auto);
+    margin-bottom: 20px;
+  }
 }
 
 .label {
@@ -46,7 +54,8 @@
 }
 
 .input {
-  @include size(358px, 48px);
+  width: 100%;
+  //   @include size(358px, 48px);
   border: 1px solid $secondaryLightOrange;
   border-radius: 0px 40px 40px 0px;
   padding: 13px 18px;
