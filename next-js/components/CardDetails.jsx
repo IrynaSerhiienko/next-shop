@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image"
 import ButtonArrowBack from "./ButtonArrowBack";
+import { useData } from "@/contexts/DataContext";
 import SelectWithOptions from "./SelectWithOptions";
 import Button from "./Button";
 import s from '@/styles/CardDetails.module.scss';
@@ -10,13 +11,16 @@ import s from '@/styles/CardDetails.module.scss';
 export default function CardDetails({cake}) {
     
     const router = useRouter()
+    const {setValues} = useData()
+
     
     const handlePlaceOrderStep1 = (e) => {
-        // router.push(`/menu/${cake.id}/placeOrderStep1`)
         router.push({
             pathname: `/menu/${cake.id}/placeOrderStep1`,
-            query: {image: cake.image}  
+            // query: {image: cake.image}  
         })
+        localStorage.setItem('selectedImage', cake.image)
+        setValues({ selectedImage: cake.image });
     }
 
   return (

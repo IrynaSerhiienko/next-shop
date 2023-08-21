@@ -7,11 +7,14 @@ import s from '../styles/PlaceOrderFormDecor.module.scss';
 // import { useForm, ValidationError } from '@formspree/react';
 
 export default function PlaceOrderFormDecor() {
-     const {register, handleSubmit, formState: {errors, isValid, isSubmitting}} = useForm({mode: 'onBlur'})
+     const {register, handleSubmit, reset, formState: {errors, isValid, isSubmitting}} = useForm({mode: 'onBlur'})
      const {formData, setValues} = useData()
 
+     const [buttonStyle, setButtonStyle] = useState(s.invalidButton); 
      const [showErrorMessage, setShowErrorMessage] = useState(false);
-     const [isRadioFilled, setIsRadioFilled] = useState(false);
+     const [isRadio1Filled, setIsRadio1Filled] = useState(false);
+     const [isRadio2Filled, setIsRadio2Filled] = useState(false);
+     const [isRadio3Filled, setIsRadio3Filled] = useState(false);
 
     const router = useRouter()
     const { id } = router.query;

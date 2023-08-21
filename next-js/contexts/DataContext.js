@@ -1,20 +1,18 @@
-import { createContext, useState, useContext } from 'react'
+import { createContext, useState, useContext } from 'react';
 
-const DataContext = createContext()
+const DataContext = createContext();
 
-export const DataProvider = ({children}) => {
+export const DataProvider = ({ children }) => {
   const [formData, setFormData] = useState({});
 
   const setValues = (values) => {
-    setFormData(prevFormData => ({
+    setFormData((prevFormData) => ({
       ...prevFormData,
-      ...values
-    }))
-  }
+      ...values,
+    }));
+  };
 
-  return <DataContext.Provider value={{formData, setValues}}>
-    {children}
-  </DataContext.Provider>
-}
+  return <DataContext.Provider value={{ formData, setValues }}>{children}</DataContext.Provider>;
+};
 
-export const useData = () => useContext(DataContext)
+export const useData = () => useContext(DataContext);

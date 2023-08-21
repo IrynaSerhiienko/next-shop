@@ -1,8 +1,8 @@
 import Image from "next/image"
-import s from '../styles/PlaceOrderTitle.module.scss';
+import s from '../styles/PlaceOrderTitleSuccess.module.scss';
 
-export default function PlaceOrderTitle({src}) {
-  
+export default function PlaceOrderTitleSuccess() {
+ 
   return (
     <div className={s.totalTitleHolder}>
         <div className={s.titleContainer}>
@@ -17,7 +17,7 @@ export default function PlaceOrderTitle({src}) {
         <div className={s.subTitleContainer}>
             <Image
             alt='place_order_title'
-            src={src}
+            src='/img/place_order/inProcessing.svg'
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority={true}

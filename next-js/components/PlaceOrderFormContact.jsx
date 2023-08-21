@@ -3,52 +3,53 @@ import { useData } from '@/contexts/DataContext';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Button from './Button';
-import s from '../styles/PlaceOrderFormDateTime.module.scss';
+import s from '../styles/PlaceOrderFormContact.module.scss';
 
-export default function PlaceOrderFormDateTime() {
+export default function PlaceOrderFormContact() {
     const {register, handleSubmit, reset, formState: {errors, isValid, isSubmitting}} = useForm({mode: 'onBlur'})
     const {formData, setValues} = useData()
     
     const [buttonStyle, setButtonStyle] = useState(s.invalidButton); 
     const [showErrorMessage, setShowErrorMessage] = useState(false);
-    const [isDateFilled, setIsDateFilled] = useState(false);
-    const [isTimeFilled, setIsTimeFilled] = useState(false);
-    const [isWishesFilled, setIsWishesFilled] = useState(false);
+    const [isNameFilled, setIsNameFilled] = useState(false);
+    const [isPhoneFilled, setIsPhoneFilled] = useState(false);
+    // const [isWishesFilled, setIsWishesFilled] = useState(false);
 
     const router = useRouter();
     const { id } = router.query;
 
     useEffect(() => {
-        setIsDateFilled(Boolean(formData.date))
-    }, [formData.date]);
+        setIsNameFilled(Boolean(formData.name))
+    }, [formData.name]);
     
     useEffect(() => {
-        setIsTimeFilled(Boolean(formData.time))
-    }, [formData.time]);
+        setIsPhoneFilled(Boolean(formData.phone))
+    }, [formData.phone]);
+
+    // useEffect(() => {
+    //     setIsWishesFilled(Boolean(formData.wishes))
+    // }, [formData.wishes]);
 
     useEffect(() => {
-        setIsWishesFilled(Boolean(formData.wishes))
-    }, [formData.wishes]);
-
-    useEffect(() => {
-        if (isDateFilled && isTimeFilled && isWishesFilled) {
+        if (isNameFilled && isPhoneFilled) {
+        // if (isNameFilled && isPhoneFilled && isWishesFilled) {
             setShowErrorMessage(false)
             setButtonStyle(s.validButton)
         } else {
             setButtonStyle(s.invalidButton)
         }
-    }, [isDateFilled, isTimeFilled, isWishesFilled])
+    }, [isNameFilled, isPhoneFilled])
 
     const onSubmit = (data) => {
         console.log(data)
-        setValues({ date: '', time: '', wishes: '' }); 
+        setValues({ name: '', phone: ''}); 
         reset();
     };
 
-    const handlePlaceOrderStep3 = () => {
+    const handlePlaceOrderStep4 = () => {
         if (isValid) {
             setShowErrorMessage(false)
-            router.push(`/menu/${id}/placeOrderStep3`);
+            router.push(`/menu/${id}/placeOrderStep4`);
         } else {
             setShowErrorMessage(true)
         }      
@@ -110,8 +111,8 @@ export default function PlaceOrderFormDateTime() {
                      Please fill out all the required fields before proceeding!
                  </p>
                 )}
-                <Button disabled={!isValid || isSubmitting} text={'next step'} onClick={handlePlaceOrderStep3} className={`${s.btnAdd} mx-auto mt-10 ${buttonStyle}`} />
-                {/* <Button disabled={!isValid || isSubmitting} text={'next step'} onClick={handlePlaceOrderStep3} className={`${s.btnAdd} mx-auto mt-10 ${isValid ? s.validButton : s.invalidButton}`} /> */}
+                <Button disabled={!isValid || isSubmitting} text={'next step'} onClick={handlePlaceOrderStep4} className={`${s.btnAdd} mx-auto mt-10 ${buttonStyle}`} />
+                {/* <Button disabled={!isValid || isSubmitting} text={'next step'} onClick={handlePlaceOrderStep4} className={`${s.btnAdd} mx-auto mt-10 ${isValid ? s.validButton : s.invalidButton}`} /> */}
             </form>
         </div>
     );

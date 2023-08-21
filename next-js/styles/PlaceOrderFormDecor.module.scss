@@ -9,6 +9,18 @@
   }
 }
 
+.validButton {
+  opacity: 100%;
+}
+
+.invalidButton {
+  opacity: 50%;
+}
+
+.error {
+  color: $mainRed;
+}
+
 .title {
   width: 100%;
   @include font-setting('Open Sans', normal, 600, 22px, 24px, 0.01em, $secondaryBrown);

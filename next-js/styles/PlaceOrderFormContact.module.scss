@@ -1,0 +1,68 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+
+.formDateTimeContainer {
+    margin: 0 auto;
+}
+
+.validButton {
+  opacity: 100%;
+}
+
+.invalidButton {
+  opacity: 50%;
+}
+
+.error {
+  color: $mainRed;
+}
+
+.title {
+  width: 100%;
+  @include font-setting('Open Sans', normal, 600, 22px, 24px, 0.01em, $secondaryBrown);
+  margin-top: 40px;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 390px) {
+    @include size(358px, auto);
+  }
+
+  @media screen and (min-width: 1130px) {
+    @include size(477px, auto);
+  }
+}
+
+.form {
+  margin: 0 0 40px 0;
+  //   display: flex;
+  //   flex-direction: column;
+}
+
+.inputWrapper {
+  width: 100%;
+  @media screen and (min-width: 390px) {
+    @include size(358px, auto);
+    margin-bottom: 20px;
+  }
+}
+
+.label {
+  //   @include size(358px, auto);
+  @include font-setting('Open Sans', normal, 500, 20px, 28px, 0.01em, $mainDarkBrown);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  //   @include size(358px, 48px);
+  border: 1px solid $secondaryLightOrange;
+  border-radius: 0px 40px 40px 0px;
+  padding: 13px 18px;
+  background-color: transparent;
+  background-color: $mainBase;
+
+  &::placeholder {
+    @include font-setting('Open Sans', normal, 400, 16px, 22px, 0.01em, $secondaryBrown);
+  }
+}

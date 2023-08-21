@@ -1,0 +1,63 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and (min-width: 1130px) {
+    padding: 0 40px;
+  }
+}
+
+.totalContainer {
+  max-width: 1440px;
+  padding: 0 15px 0 0;
+  display: flex;
+  gap: 18px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+
+  @media screen and (min-width: 1130px) {
+    padding: 0 40px;
+    gap: 40px;
+    margin-bottom: 200px;
+  }
+}
+
+.descriptionContainer {
+  @include size(253px, auto);
+
+  @media screen and (min-width: 1130px) {
+    padding-top: 133px;
+    @include size(495px, auto);
+  }
+
+  @media screen and (min-width: 1440px) {
+    @include size(595px, auto);
+  }
+}
+
+.text {
+  @include font-setting('Open Sans', normal, 400, 28px, 28px, 0.01em, $secondaryBrown);
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1130px) {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+}
+
+.addStyles {
+  font-weight: 600;
+  color: $mainRed;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1130px) {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 80px;
+  }
+}
