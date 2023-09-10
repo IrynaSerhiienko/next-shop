@@ -1,29 +1,28 @@
 @import './_variables.scss';
+@import './_mixins.scss';
 
 .totalContainer {
+  margin-bottom: 100px;
+
   @media screen and (min-width: 1130px) {
-    margin: 0 auto;
+    margin: 0 auto 200px auto;
   }
 }
 
 .title {
   display: flex;
   justify-content: flex-start;
-  width: 230px;
+  @include size(230px, auto);
   margin: 40px 0 40px 20%;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 44px;
-  line-height: 48px;
-  color: $mainRed;
+  @include font-setting('Open Sans', normal, 400, 44px, 48px, 0.01em, $mainRed);
 
   @media screen and (min-width: 375px) {
-    width: 253px;
+    @include size(253px, auto);
   }
 
   @media screen and (min-width: 768px) {
+    @include size(285px, auto);
     margin-left: 25%;
-    width: 285px;
   }
 
   @media screen and (min-width: 1024px) {
@@ -40,7 +39,6 @@
 .imgDescriptionContainer {
   @media screen and (min-width: 1130px) {
     display: flex;
-    margin-bottom: 200px;
   }
 }
 
@@ -52,29 +50,23 @@
   width: 100%;
   height: 290px;
   cursor: pointer;
-  //   border: 1px solid red;
 
   @media screen and (min-width: 375px) {
     height: 368px;
   }
 
   @media screen and (min-width: 425px) {
-    width: 368px;
-    height: 368px;
+    @include size(368px, 368px);
   }
 
   @media screen and (min-width: 768px) {
-    width: 498px;
-    height: 498px;
+    @include size(498px, 498px);
   }
 
   @media screen and (min-width: 1130px) {
     margin: 0;
     margin: 0 20px 0 280px;
-  }
-
-  .img {
-    // transform: scale(1.2);
+    align-self: flex-end;
   }
 }
 
@@ -86,26 +78,22 @@
   }
 
   @media screen and (min-width: 1130px) {
-    width: 250px;
+    @include size(305px, auto);
     margin-left: 0;
-    align-self: end;
+    align-self: flex-end;
+    // padding-top: 50px;
   }
 
   .description {
     display: flex;
     margin-bottom: 20px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
+    @include font-setting('Open Sans', normal, 400, 18px, 24px, 0.01em, $mainDarkBrown);
     text-transform: lowercase;
-    color: $mainDarkBrown;
 
     @media screen and (min-width: 1130px) {
       margin-bottom: 40px;
       font-size: 20px;
       line-height: 28px;
-      text-transform: lowercase;
     }
   }
 
@@ -120,21 +108,6 @@
 
     @media screen and (min-width: 1130px) {
       margin-bottom: 40px;
-      font-size: 24px;
-      line-height: 24px;
-    }
-  }
-
-  .weight {
-    display: flex;
-    margin-bottom: 20px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
-    color: $mainDarkBrown;
-
-    @media screen and (min-width: 1130px) {
       font-size: 24px;
       line-height: 24px;
     }

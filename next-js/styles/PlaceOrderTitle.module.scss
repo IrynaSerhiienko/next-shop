@@ -2,15 +2,19 @@
 
 .totalTitleHolder {
   @apply flex gap-2 items-end;
-  margin: 40px 0 40px 20%;
+  margin: 40px auto 40px 60px;
+
+  @media screen and (min-width: 390px) {
+    margin-left: 100px;
+  }
 
   @media screen and (min-width: 768px) {
     @apply gap-5;
-    margin-left: 40%;
+    margin-left: 300px;
   }
 
   @media screen and (min-width: 1130px) {
-    margin-top: 52px;
+    margin: 52px auto 40px 538px;
   }
 }
 
@@ -28,11 +32,13 @@
 .subTitleContainer {
   position: relative;
   transform: translate3d(0, 0, 0);
-  width: 92px;
-  height: 32px;
+  @include size(92px, 32px);
+  //   width: 92px;
+  //   height: 32px;
 
   @media screen and (min-width: 768px) {
-    width: 115px;
-    height: 40px;
+    @include size(115px, 40px);
+    // width: 115px;
+    // height: 40px;
   }
 }

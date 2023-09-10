@@ -1,0 +1,14 @@
+// @import './_variables.scss';
+@import './_mixins.scss';
+
+.editDeleteIconsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  //@include size(46px, 46px);
+}

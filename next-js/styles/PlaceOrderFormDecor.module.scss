@@ -7,15 +7,24 @@
   @media screen and (min-width: 390px) {
     @include size(352px, auto);
   }
+
+  @media screen and (min-width: 1130px) {
+    margin: 0;
+    @include size(480px, auto);
+  }
+
+  @media screen and (min-width: 1440px) {
+    @include size(630px, auto);
+  }
 }
 
-.validButton {
-  opacity: 100%;
-}
+// .validButton {
+//   opacity: 100%;
+// }
 
-.invalidButton {
-  opacity: 50%;
-}
+// .invalidButton {
+//   opacity: 50%;
+// }
 
 .error {
   color: $mainRed;
@@ -24,14 +33,24 @@
 .title {
   width: 100%;
   @include font-setting('Open Sans', normal, 600, 22px, 24px, 0.01em, $secondaryBrown);
-  //   margin-top: 40px;
   margin-bottom: 32px;
+
+  @media screen and (min-width: 1130px) {
+    @include size(477px, auto);
+    font-size: 24px;
+    margin-bottom: 80px;
+  }
 }
 
 .subTitle {
-  width: 100%;
   @include font-setting('Open Sans', normal, 500, 19px, 28px, 0.001em, $mainRed);
+  width: 100%;
   margin-bottom: 16px;
+
+  @media screen and (min-width: 1130px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .form {
@@ -40,7 +59,7 @@
   margin: 0 0 40px 0;
 }
 
-.option {
+.radio {
   @include font-setting('Open Sans', normal, 400, 14px, 22px, 0.01em, $secondaryBrown);
   width: 150px;
   margin-right: 12px;
@@ -61,11 +80,19 @@
   display: block;
   position: relative;
   cursor: pointer;
+  margin-bottom: 16px;
+
+  &:nth-child(4) {
+    margin-bottom: 40px;
+  }
+
+  &:nth-child(3) {
+    margin-bottom: 20px;
+  }
 
   &:hover {
     .checkmark,
     .checkmarkForCheckbox {
-      // .input ~ .checkmark {
       border: 2px solid $secondaryBrown;
     }
   }
@@ -108,8 +135,6 @@
     transform: translate(-50%, -50%) rotate(45deg);
     border-radius: 2px;
     background-color: $secondaryLightRed;
-    // width: 14px;
-    // height: 2px;
   }
 
   .checkmarkForCheckbox::after {
@@ -119,6 +144,19 @@
     transform: translate(-50%, -50%) rotate(-45deg);
     border-radius: 2px;
     background-color: $secondaryLightRed;
+  }
+
+  @media screen and (min-width: 1130px) {
+    @include size(416px, auto);
+    margin-bottom: 20px;
+
+    &:nth-child(4) {
+      margin-bottom: 80px;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -151,6 +189,16 @@
 }
 
 .addCandles {
-  width: 308px;
+  //   width: 290px;
+  @include size(290px, auto);
   @include font-setting('Open Sans', normal, 400, 16px, 22px, 0.001em, $secondaryBrown);
+
+  @media screen and (min-width: 1130px) {
+    width: 100%;
+    // @include size(380px, auto);
+  }
+}
+
+.btnAdd {
+  @include size(262px, auto);
 }
