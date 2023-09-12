@@ -1,0 +1,7 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+
+.weightCostContainer {
+  @include font-setting('Open Sans', normal, 400, 20px, 24px, 0.001em, $mainDarkBrown);
+  margin-bottom: 20px;
+}

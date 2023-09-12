@@ -14,12 +14,20 @@ export default function EditDeleteIcons() {
                 />
             </div>
         {/* </Link> */}
+            <div className={s.iconLine}>
+                    <Image
+                        alt='lineIcon'
+                        src='/img/place_order/line.svg'
+                        fill
+                    />
+            </div>
         {/* <Link href='/'> */}
-            <div className={s.icon}>
+            <div className={s.deleteIconContainer}>
                 <Image
+                    className={s.deleteIcon}
                     alt='deleteIcon'
-                    src='/img/place_order/deleteOrder1.png'
                     // src='/img/place_order/deleteOrder.svg'
+                    src='/img/place_order/trash-can-regular.svg'
                     fill
                 />
             </div>

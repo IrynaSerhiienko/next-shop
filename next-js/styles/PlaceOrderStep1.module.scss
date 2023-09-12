@@ -22,6 +22,7 @@
 
 .imgEditingContainer {
   @media screen and (min-width: 1130px) {
+    @include size(325px, auto);
     padding: 12px 12px;
     border: 1px solid $secondaryLightGrey;
     margin-left: 97px;
@@ -47,9 +48,4 @@
 .nameContainer {
   @include font-setting('Open Sans', normal, 500, 24px, 24px, 0.001em, $mainDarkBrown);
   margin-bottom: 8px;
-}
-
-.weightCostContainer {
-  @include font-setting('Open Sans', normal, 400, 20px, 24px, 0.001em, $mainDarkBrown);
-  margin-bottom: 20px;
 }
