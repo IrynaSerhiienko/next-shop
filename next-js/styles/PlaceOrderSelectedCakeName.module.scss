@@ -1,0 +1,7 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+
+.nameContainer {
+  @include font-setting('Open Sans', normal, 500, 24px, 24px, 0.001em, $mainDarkBrown);
+  margin-bottom: 8px;
+}

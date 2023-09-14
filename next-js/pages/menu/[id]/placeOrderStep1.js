@@ -1,45 +1,35 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import { useData } from '@/contexts/DataContext';
 import Head from 'next/head';
-import Image from 'next/image';
 import PlaceOrderTitle from '@/components/PlaceOrderTitle';
 import ButtonArrowBack from '@/components/ButtonArrowBack';
 import PlaceOrderFormDecor from '@/components/PlaceOrderFormDecor';
 import WeightCost from '@/components/WeightCost';
 import EditDeleteIcons from '@/components/EditDeleteIcons';
+import PlaceOrderSelectedImage from '@/components/PlaceOrderSelectedImage';
+import PlaceOrderSelectedCakeName from '@/components/PlaceOrderSelectedCakeName';
 
 import s from '@/styles/PlaceOrderStep1.module.scss';
 
 export default function PlaceOrderStep1() {
   const [mobile, setMobile] = useState(undefined);
   const router = useRouter();
-  const { formData, setValues } = useData();
-  console.log(formData);
 
   useEffect(() => {
-    const savedImage = localStorage.getItem('selectedImage');
-    const savedName = localStorage.getItem('selectedName');
-    const savedWeight = localStorage.getItem('weight');
-
-    if (savedImage) {
-      setValues({ selectedImage: savedImage });
-    }
-    if (savedName) {
-      setValues({ selectedName: savedName });
-    }
-    if (savedWeight) {
-      setValues({ selectedWeight: savedWeight });
-    }
+    let timeout;
 
     const updateMobile = () => {
-      setMobile(window.innerWidth < 1130 ? true : false);
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        setMobile(window.innerWidth < 1130 ? true : false);
+      }, 500);
     };
     updateMobile();
     window.addEventListener('resize', updateMobile);
     return () => {
       window.removeEventListener('resize', updateMobile);
     };
+    clearTimeout(timeout);
   }, []);
 
   return typeof mobile != undefined ? (
@@ -53,30 +43,13 @@ export default function PlaceOrderStep1() {
           <div className={s.arrowImgContainer}>
             <ButtonArrowBack text={'back to cake selection'} onClick={() => router.back()} />
             {mobile ? (
-              <div className={s.imgContainer}>
-                <Image
-                  alt='Cake image'
-                  src={formData.selectedImage}
-                  fill
-                  priority={true}
-                  loading='eager'
-                />
-              </div>
+              <PlaceOrderSelectedImage />
             ) : (
               <div className={s.imgEditingContainer}>
-                <div className={s.imgContainer}>
-                  <Image
-                    alt='Cake image'
-                    src={formData.selectedImage}
-                    fill
-                    priority={true}
-                    loading='eager'
-                  />
-                </div>
+                <PlaceOrderSelectedImage />
                 <div className={s.editingContainer}>
-                  <div className={`${s.nameContainer}`}>{formData.selectedName}</div>
+                  <PlaceOrderSelectedCakeName />
                   <WeightCost />
-
                   <EditDeleteIcons />
                 </div>
               </div>
@@ -87,47 +60,4 @@ export default function PlaceOrderStep1() {
       </div>
     </>
   ) : null;
-}
-
-{
-  /* <div className={`${s.weightCostContainer} flex justify-between`}>
-                    <div className={s.weightContainer}>{formData.selectedWeight}</div>
-                    <div className={`${s.costContainer} flex`}>
-                      <div className={`${s.cost} mr-1`}>
-                        {formData.selectedWeight &&
-                          parseFloat(formData.selectedWeight.replace(',', '.').replace(' kg', '')) *
-                            800}
-                      </div>
-                      <div className={s.currency}>UAH</div>
-                    </div>
-                  </div> */
-}
-
-{
-  /* <div className={s.imgEditingContainer}>
-              <div className={s.imgContainer}>
-                <Image
-                  alt='Cake image'
-                  src={formData.selectedImage}
-                  fill
-                  priority={true}
-                  loading='eager'
-                />
-              </div>
-              <div className={s.editingContainer}>
-                <div className={`${s.nameContainer}`}>{formData.selectedName}</div>
-                <div className={`${s.weightCostContainer} flex justify-between`}>
-                  <div className={s.weightContainer}>{formData.selectedWeight}</div>
-                  <div className={`${s.costContainer} flex`}>
-                    <div className={`${s.cost} mr-1`}>
-                      {formData.selectedWeight &&
-                        parseFloat(formData.selectedWeight.replace(',', '.').replace(' kg', '')) *
-                          800}
-                    </div>
-                    <div className={s.currency}>UAH</div>
-                  </div>
-                </div>
-                <EditDeleteIcons />
-              </div>
-            </div> */
 }

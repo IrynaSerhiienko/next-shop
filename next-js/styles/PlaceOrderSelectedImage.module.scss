@@ -1,0 +1,17 @@
+@import './_mixins.scss';
+
+.imgContainer {
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  @include size(265px, 265px);
+  align-self: self-end;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 425px) {
+    align-self: center;
+  }
+
+  @media screen and (min-width: 1130px) {
+    @include size(301px, 360px);
+  }
+}

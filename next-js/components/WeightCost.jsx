@@ -1,10 +1,19 @@
+import { useEffect } from 'react';
 import { useData } from '@/contexts/DataContext';
+
 import s from '../styles/WeightCost.module.scss';
 
 
 export default function WeightCost() {
-    const { formData } = useData();
-    // const { formData, setValues } = useData();
+    const { formData, setValues } = useData();
+
+    useEffect(() => {
+        const savedWeight = localStorage.getItem('weight');
+
+    if (savedWeight) {
+      setValues({ selectedWeight: savedWeight });
+    }
+    }, [])
 
   return (
     <div className={`${s.weightCostContainer} flex justify-between`}>
