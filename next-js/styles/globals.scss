@@ -23,6 +23,10 @@ body {
   height: auto;
 }
 
+body.activeModal {
+  overflow-y: hidden;
+}
+
 #__next {
   min-height: 100vh;
   display: flex;
@@ -33,7 +37,7 @@ body {
 
 main {
   padding-top: 80px;
-//   flex-grow: 1;
+  //   flex-grow: 1;
 }
 
 header {
